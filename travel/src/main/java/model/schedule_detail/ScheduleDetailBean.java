@@ -18,85 +18,101 @@ import model.sight.SightBean;
 @Table(name="Schedule_Detail")
 public class ScheduleDetailBean implements Serializable {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Schedule_id;
-	@Column(columnDefinition="char(10)")
-	private String Sight_id;
+	@Column(name="schedule_id")
+	private String scheduleId;
+	@Column(name="sight_id")
+	private String sightId;
 	@Id
-	private Integer Schedule_detail_dayX;
+	@Column(name="schedule_detail_dayX")
+	private Integer scheduleDetailDayX;
 	@Id
-	private Time Schedule_detail_startTime;
-	private Time Schedule_detail_endTime;
+	@Column(name="schedule_detail_startTime")
+	private Time scheduleDetailStartTime;
+	@Column(name="schedule_detail_endTime")
+	private Time scheduleDetailEndTime;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Schedule_id")
-	private ScheduleBean ScheduleBean;
+	@JoinColumn(name="schedule_id")
+	private ScheduleBean scheduleBean;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Sight_id")
-	private SightBean SightBean;
+	@JoinColumn(name="sight_id")
+	private SightBean sightBean;
 	
 	public ScheduleDetailBean() { }
-	public ScheduleDetailBean(String schedule_id, String sight_id, Integer schedule_detail_dayX,
-			Time schedule_detail_startTime, Time schedule_detail_endTime, ScheduleBean scheduleBean,
-			SightBean sightBean) {
+
+	public ScheduleDetailBean(String scheduleId, String sightId, Integer scheduleDetailDayX,
+			Time scheduleDetailStartTime, Time scheduleDetailEndTime, ScheduleBean scheduleBean, SightBean sightBean) {
 		super();
-		Schedule_id = schedule_id;
-		Sight_id = sight_id;
-		Schedule_detail_dayX = schedule_detail_dayX;
-		Schedule_detail_startTime = schedule_detail_startTime;
-		Schedule_detail_endTime = schedule_detail_endTime;
-		ScheduleBean = scheduleBean;
-		SightBean = sightBean;
+		this.scheduleId = scheduleId;
+		this.sightId = sightId;
+		this.scheduleDetailDayX = scheduleDetailDayX;
+		this.scheduleDetailStartTime = scheduleDetailStartTime;
+		this.scheduleDetailEndTime = scheduleDetailEndTime;
+		this.scheduleBean = scheduleBean;
+		this.sightBean = sightBean;
 	}
+
 	@Override
 	public String toString() {
-		return "ScheduleDetailBean [Schedule_id=" + Schedule_id + ", Sight_id=" + Sight_id + ", Schedule_detail_dayX="
-				+ Schedule_detail_dayX + ", Schedule_detail_startTime=" + Schedule_detail_startTime
-				+ ", Schedule_detail_endTime=" + Schedule_detail_endTime + ", ScheduleBean=" + ScheduleBean
-				+ ", SightBean=" + SightBean + "]";
+		return "ScheduleDetailBean [scheduleId=" + scheduleId + ", sightId=" + sightId + ", scheduleDetailDayX="
+				+ scheduleDetailDayX + ", scheduleDetailStartTime=" + scheduleDetailStartTime
+				+ ", scheduleDetailEndTime=" + scheduleDetailEndTime + "]";
 	}
-	public String getSchedule_id() {
-		return Schedule_id;
+
+	public String getScheduleId() {
+		return scheduleId;
 	}
-	public void setSchedule_id(String schedule_id) {
-		Schedule_id = schedule_id;
+
+	public void setScheduleId(String scheduleId) {
+		this.scheduleId = scheduleId;
 	}
-	public String getSight_id() {
-		return Sight_id;
+
+	public String getSightId() {
+		return sightId;
 	}
-	public void setSight_id(String sight_id) {
-		Sight_id = sight_id;
+
+	public void setSightId(String sightId) {
+		this.sightId = sightId;
 	}
-	public Integer getSchedule_detail_dayX() {
-		return Schedule_detail_dayX;
+
+	public Integer getScheduleDetailDayX() {
+		return scheduleDetailDayX;
 	}
-	public void setSchedule_detail_dayX(Integer schedule_detail_dayX) {
-		Schedule_detail_dayX = schedule_detail_dayX;
+
+	public void setScheduleDetailDayX(Integer scheduleDetailDayX) {
+		this.scheduleDetailDayX = scheduleDetailDayX;
 	}
-	public Time getSchedule_detail_startTime() {
-		return Schedule_detail_startTime;
+
+	public Time getScheduleDetailStartTime() {
+		return scheduleDetailStartTime;
 	}
-	public void setSchedule_detail_startTime(Time schedule_detail_startTime) {
-		Schedule_detail_startTime = schedule_detail_startTime;
+
+	public void setScheduleDetailStartTime(Time scheduleDetailStartTime) {
+		this.scheduleDetailStartTime = scheduleDetailStartTime;
 	}
-	public Time getSchedule_detail_endTime() {
-		return Schedule_detail_endTime;
+
+	public Time getScheduleDetailEndTime() {
+		return scheduleDetailEndTime;
 	}
-	public void setSchedule_detail_endTime(Time schedule_detail_endTime) {
-		Schedule_detail_endTime = schedule_detail_endTime;
+
+	public void setScheduleDetailEndTime(Time scheduleDetailEndTime) {
+		this.scheduleDetailEndTime = scheduleDetailEndTime;
 	}
+
 	public ScheduleBean getScheduleBean() {
-		return ScheduleBean;
+		return scheduleBean;
 	}
+
 	public void setScheduleBean(ScheduleBean scheduleBean) {
-		ScheduleBean = scheduleBean;
+		this.scheduleBean = scheduleBean;
 	}
+
 	public SightBean getSightBean() {
-		return SightBean;
+		return sightBean;
 	}
+
 	public void setSightBean(SightBean sightBean) {
-		SightBean = sightBean;
+		this.sightBean = sightBean;
 	}
-	
 	
 	
 }

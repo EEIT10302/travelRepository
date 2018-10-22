@@ -16,61 +16,88 @@ import model.hotel_room.HotelRoomBean;
 @Table(name="Hotel_Room_List")
 public class HotelRoomListBean implements Serializable {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Room_id;
+	@Column(name="room_id")
+	private String roomId;
 	@Id
-	private java.util.Date Room_date;
-	private Integer Room_amount;
-	private Integer Room_price;
+	@Column(name="room_date")
+	private Date roomDate;
+	@Column(name="room_amount")
+	private Integer roomAmount;
+	@Column(name="room_price")
+	private Integer roomPrice;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Room_id")
-	private HotelRoomBean HotelRoomBean;
+	@JoinColumn(name="room_id")
+	private HotelRoomBean hotelRoomBean;
 	
 	
 	public HotelRoomListBean() { }
-	public HotelRoomListBean(String room_id, Date room_date, Integer room_amount, Integer room_price,
+
+
+	public HotelRoomListBean(String roomId, Date roomDate, Integer roomAmount, Integer roomPrice,
 			HotelRoomBean hotelRoomBean) {
 		super();
-		Room_id = room_id;
-		Room_date = room_date;
-		Room_amount = room_amount;
-		Room_price = room_price;
-		HotelRoomBean = hotelRoomBean;
+		this.roomId = roomId;
+		this.roomDate = roomDate;
+		this.roomAmount = roomAmount;
+		this.roomPrice = roomPrice;
+		this.hotelRoomBean = hotelRoomBean;
 	}
+
+
 	@Override
 	public String toString() {
-		return "HotelRoomListBean [Room_id=" + Room_id + ", Room_date=" + Room_date + ", Room_amount=" + Room_amount
-				+ ", Room_price=" + Room_price + ", HotelRoomBean=" + HotelRoomBean + "]";
+		return "HotelRoomListBean [roomId=" + roomId + ", roomDate=" + roomDate + ", roomAmount=" + roomAmount
+				+ ", roomPrice=" + roomPrice + "]";
 	}
-	public String getRoom_id() {
-		return Room_id;
+
+
+	public String getRoomId() {
+		return roomId;
 	}
-	public void setRoom_id(String room_id) {
-		Room_id = room_id;
+
+
+	public void setRoomId(String roomId) {
+		this.roomId = roomId;
 	}
-	public Date getRoom_date() {
-		return Room_date;
+
+
+	public Date getRoomDate() {
+		return roomDate;
 	}
-	public void setRoom_date(Date room_date) {
-		Room_date = room_date;
+
+
+	public void setRoomDate(Date roomDate) {
+		this.roomDate = roomDate;
 	}
-	public Integer getRoom_amount() {
-		return Room_amount;
+
+
+	public Integer getRoomAmount() {
+		return roomAmount;
 	}
-	public void setRoom_amount(Integer room_amount) {
-		Room_amount = room_amount;
+
+
+	public void setRoomAmount(Integer roomAmount) {
+		this.roomAmount = roomAmount;
 	}
-	public Integer getRoom_price() {
-		return Room_price;
+
+
+	public Integer getRoomPrice() {
+		return roomPrice;
 	}
-	public void setRoom_price(Integer room_price) {
-		Room_price = room_price;
+
+
+	public void setRoomPrice(Integer roomPrice) {
+		this.roomPrice = roomPrice;
 	}
+
+
 	public HotelRoomBean getHotelRoomBean() {
-		return HotelRoomBean;
+		return hotelRoomBean;
 	}
+
+
 	public void setHotelRoomBean(HotelRoomBean hotelRoomBean) {
-		HotelRoomBean = hotelRoomBean;
+		this.hotelRoomBean = hotelRoomBean;
 	}
 	
 }

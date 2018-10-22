@@ -16,108 +16,110 @@ import model.sight.SightBean;
 @Table(name="Ticket_Order")
 public class TicketOrderBean {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String T_order_id;
-	@Column(columnDefinition="char(10)")
-	private String Customer_id;
-	@Column(columnDefinition="char(10)")
-	private String Sight_id;
-	@Column(columnDefinition="nvarchar(50)")
-	private String T_order_name;
-	private Integer T_order_total;
-	private Integer T_order_amount;
-	@Column(columnDefinition="char(2)")
-	private String T_order_national;
-	@Column(columnDefinition="varchar(100)")
-	private String T_order_email;
+	@Column(name="T_order_id")
+	private String tOrderId;
+	@Column(name="customer_id")
+	private String customerId;
+	@Column(name="Sight_id")
+	private String sightId;
+	@Column(name="T_order_name")
+	private String tOrderName;
+	@Column(name="T_order_total")
+	private Integer tOrderTotal;
+	@Column(name="T_order_amount")
+	private Integer tOrderAmount;
+	@Column(name="T_order_national")
+	private String tOrderNational;
+	@Column(name="T_order_email")
+	private String tOrderEmail;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Customer_id")
-	private CustomerBean CustomerBean;
+	@JoinColumn(name="customer_id")
+	private CustomerBean customerBean;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Sight_id")
-	private SightBean SightBean;
+	@JoinColumn(name="sight_id")
+	private SightBean sightBean;
 	public TicketOrderBean() { }
-	public TicketOrderBean(String t_order_id, String customer_id, String sight_id, String t_order_name,
-			Integer t_order_total, Integer t_order_amount, String t_order_national, String t_order_email,
-			CustomerBean customerBean, SightBean sightBean) {
+	public TicketOrderBean(String tOrderId, String customerId, String sightId, String tOrderName, Integer tOrderTotal,
+			Integer tOrderAmount, String tOrderNational, String tOrderEmail, CustomerBean customerBean,
+			SightBean sightBean) {
 		super();
-		T_order_id = t_order_id;
-		Customer_id = customer_id;
-		Sight_id = sight_id;
-		T_order_name = t_order_name;
-		T_order_total = t_order_total;
-		T_order_amount = t_order_amount;
-		T_order_national = t_order_national;
-		T_order_email = t_order_email;
-		CustomerBean = customerBean;
-		SightBean = sightBean;
+		this.tOrderId = tOrderId;
+		this.customerId = customerId;
+		this.sightId = sightId;
+		this.tOrderName = tOrderName;
+		this.tOrderTotal = tOrderTotal;
+		this.tOrderAmount = tOrderAmount;
+		this.tOrderNational = tOrderNational;
+		this.tOrderEmail = tOrderEmail;
+		this.customerBean = customerBean;
+		this.sightBean = sightBean;
 	}
 	@Override
 	public String toString() {
-		return "TicketOrderBean [T_order_id=" + T_order_id + ", Customer_id=" + Customer_id + ", Sight_id=" + Sight_id
-				+ ", T_order_name=" + T_order_name + ", T_order_total=" + T_order_total + ", T_order_amount="
-				+ T_order_amount + ", T_order_national=" + T_order_national + ", T_order_email=" + T_order_email
-				+ ", CustomerBean=" + CustomerBean + ", SightBean=" + SightBean + "]";
+		return "TicketOrderBean [tOrderId=" + tOrderId + ", customerId=" + customerId + ", sightId=" + sightId
+				+ ", tOrderName=" + tOrderName + ", tOrderTotal=" + tOrderTotal + ", tOrderAmount=" + tOrderAmount
+				+ ", tOrderNational=" + tOrderNational + ", tOrderEmail=" + tOrderEmail + "]";
 	}
-	public String getT_order_id() {
-		return T_order_id;
+	public String gettOrderId() {
+		return tOrderId;
 	}
-	public void setT_order_id(String t_order_id) {
-		T_order_id = t_order_id;
+	public void settOrderId(String tOrderId) {
+		this.tOrderId = tOrderId;
 	}
-	public String getCustomer_id() {
-		return Customer_id;
+	public String getCustomerId() {
+		return customerId;
 	}
-	public void setCustomer_id(String customer_id) {
-		Customer_id = customer_id;
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
-	public String getSight_id() {
-		return Sight_id;
+	public String getSightId() {
+		return sightId;
 	}
-	public void setSight_id(String sight_id) {
-		Sight_id = sight_id;
+	public void setSightId(String sightId) {
+		this.sightId = sightId;
 	}
-	public String getT_order_name() {
-		return T_order_name;
+	public String gettOrderName() {
+		return tOrderName;
 	}
-	public void setT_order_name(String t_order_name) {
-		T_order_name = t_order_name;
+	public void settOrderName(String tOrderName) {
+		this.tOrderName = tOrderName;
 	}
-	public Integer getT_order_total() {
-		return T_order_total;
+	public Integer gettOrderTotal() {
+		return tOrderTotal;
 	}
-	public void setT_order_total(Integer t_order_total) {
-		T_order_total = t_order_total;
+	public void settOrderTotal(Integer tOrderTotal) {
+		this.tOrderTotal = tOrderTotal;
 	}
-	public Integer getT_order_amount() {
-		return T_order_amount;
+	public Integer gettOrderAmount() {
+		return tOrderAmount;
 	}
-	public void setT_order_amount(Integer t_order_amount) {
-		T_order_amount = t_order_amount;
+	public void settOrderAmount(Integer tOrderAmount) {
+		this.tOrderAmount = tOrderAmount;
 	}
-	public String getT_order_national() {
-		return T_order_national;
+	public String gettOrderNational() {
+		return tOrderNational;
 	}
-	public void setT_order_national(String t_order_national) {
-		T_order_national = t_order_national;
+	public void settOrderNational(String tOrderNational) {
+		this.tOrderNational = tOrderNational;
 	}
-	public String getT_order_email() {
-		return T_order_email;
+	public String gettOrderEmail() {
+		return tOrderEmail;
 	}
-	public void setT_order_email(String t_order_email) {
-		T_order_email = t_order_email;
+	public void settOrderEmail(String tOrderEmail) {
+		this.tOrderEmail = tOrderEmail;
 	}
 	public CustomerBean getCustomerBean() {
-		return CustomerBean;
+		return customerBean;
 	}
 	public void setCustomerBean(CustomerBean customerBean) {
-		CustomerBean = customerBean;
+		this.customerBean = customerBean;
 	}
 	public SightBean getSightBean() {
-		return SightBean;
+		return sightBean;
 	}
 	public void setSightBean(SightBean sightBean) {
-		SightBean = sightBean;
+		this.sightBean = sightBean;
 	}
+	
 	
 }

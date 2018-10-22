@@ -17,55 +17,51 @@ import model.sight.SightBean;
 @Table(name="Sight_Favorite")
 public class SightFavoriteBean implements Serializable {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Sight_id;
+	@Column(name="sight_id")
+	private String sightId;
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Customer_id;
-	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Customer_id")
-	private CustomerBean CustomerBean;
+	@Column(name="customer_id")
+	private String customerId;
 	@OneToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="Customer_id")
-	private SightBean SightBean;
+	private SightBean sightBean;
 	
 	public SightFavoriteBean() { }
-	public SightFavoriteBean(String sight_id, String customer_id, CustomerBean customerBean,
-			SightBean sightBean) {
+
+	public SightFavoriteBean(String sightId, String customerId, SightBean sightBean) {
 		super();
-		Sight_id = sight_id;
-		Customer_id = customer_id;
-		CustomerBean = customerBean;
-		SightBean = sightBean;
+		this.sightId = sightId;
+		this.customerId = customerId;
+		this.sightBean = sightBean;
 	}
+
 	@Override
 	public String toString() {
-		return "SightFavoriteBean [Sight_id=" + Sight_id + ", Customer_id=" + Customer_id + ", CustomerBean="
-				+ CustomerBean + ", SightBean=" + SightBean + "]";
+		return "SightFavoriteBean [sightId=" + sightId + ", customerId=" + customerId + "]";
 	}
-	public String getSight_id() {
-		return Sight_id;
+
+	public String getSightId() {
+		return sightId;
 	}
-	public void setSight_id(String sight_id) {
-		Sight_id = sight_id;
+
+	public void setSightId(String sightId) {
+		this.sightId = sightId;
 	}
-	public String getCustomer_id() {
-		return Customer_id;
+
+	public String getCustomerId() {
+		return customerId;
 	}
-	public void setCustomer_id(String customer_id) {
-		Customer_id = customer_id;
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
-	public CustomerBean getCustomerBean() {
-		return CustomerBean;
-	}
-	public void setCustomerBean(CustomerBean customerBean) {
-		CustomerBean = customerBean;
-	}
+
 	public SightBean getSightBean() {
-		return SightBean;
+		return sightBean;
 	}
+
 	public void setSightBean(SightBean sightBean) {
-		SightBean = sightBean;
+		this.sightBean = sightBean;
 	}
 	
 }

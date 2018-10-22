@@ -2,12 +2,10 @@ package model.schedule_favorite;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import model.customer.CustomerBean;
@@ -16,55 +14,41 @@ import model.schedule.ScheduleBean;
 @Table(name="Schedule _Favorite")
 public class ScheduleFavoriteBean implements Serializable {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Schedule_id;
+	@Column(name="schedule_id")
+	private String scheduleId;
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Customer_id;
-	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Customer_id")
-	private CustomerBean CustomerBean;//-----??
-	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Schedule_id")
-	private ScheduleBean ScheduleBean;//----??
+	@Column(name="customer_id")
+	private String customerId;
 	
 	public ScheduleFavoriteBean() { }
-	public ScheduleFavoriteBean(String schedule_id, String customer_id, CustomerBean customerBean,
-			ScheduleBean scheduleBean) {
+
+	public ScheduleFavoriteBean(String scheduleId, String customerId) {
 		super();
-		Schedule_id = schedule_id;
-		Customer_id = customer_id;
-		CustomerBean = customerBean;
-		ScheduleBean = scheduleBean;
+		this.scheduleId = scheduleId;
+		this.customerId = customerId;
 	}
+
 	@Override
 	public String toString() {
-		return "ScheduleFavoriteBean [Schedule_id=" + Schedule_id + ", Customer_id=" + Customer_id + ", CustomerBean="
-				+ CustomerBean + ", ScheduleBean=" + ScheduleBean + "]";
+		return "ScheduleFavoriteBean [scheduleId=" + scheduleId + ", customerId=" + customerId + "]";
 	}
-	public String getSchedule_id() {
-		return Schedule_id;
+
+	public String getScheduleId() {
+		return scheduleId;
 	}
-	public void setSchedule_id(String schedule_id) {
-		Schedule_id = schedule_id;
+
+	public void setScheduleId(String scheduleId) {
+		this.scheduleId = scheduleId;
 	}
-	public String getCustomer_id() {
-		return Customer_id;
+
+	public String getCustomerId() {
+		return customerId;
 	}
-	public void setCustomer_id(String customer_id) {
-		Customer_id = customer_id;
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
-	public CustomerBean getCustomerBean() {
-		return CustomerBean;
-	}
-	public void setCustomerBean(CustomerBean customerBean) {
-		CustomerBean = customerBean;
-	}
-	public ScheduleBean getScheduleBean() {
-		return ScheduleBean;
-	}
-	public void setScheduleBean(ScheduleBean scheduleBean) {
-		ScheduleBean = scheduleBean;
-	}
+
+
 	
 }

@@ -11,178 +11,262 @@ import javax.persistence.Table;
 @Table(name="Hotel")
 public class HotelBean {
 	@Id
-	@Column(columnDefinition="char(8)")
-	private String Hotel_id;
-	@Column(columnDefinition="nvarchar(100)")
-	private String Hotel_name;
-	@Column(columnDefinition="varchar(50)")
-	private String Hotel_phone;
-	@Column(columnDefinition="varchar(max)")
-	private String Hotel_address;
-	@Column(columnDefinition="nvarchar(10)")
-	private String Hotel_area;
-	@Column(columnDefinition="varchar(50)")
-	private String Hotel_url;
-	@Column(columnDefinition="varchar(max)")
-	private String Hotel_img;
-	private Integer Hotel_star;
-	private Double Hotel_score_avg;
-	@Column(columnDefinition="nvarchar(100)")
-	private String Hotel_language;
-	private Boolean Hotel_wifi;
-	@Column(columnDefinition="nvarchar(100)")
-	private String Hotel_food;
-	@Column(columnDefinition="nvarchar(max)")
-	private String Hotel_convinience;
-	private Time Hotel_checkInTime;
-	private Time Hotel_checkOutTime;
-	private Integer Hotel_floor;
-	private Integer Hotel_roomAmount;
-	private Integer Hotel_score_times;
+	@Column(name="hotel_id")
+	private String hotelId;
+	@Column(name="hotel_name")
+	private String hotelName;
+	@Column(name="hotel_name")
+	private String hotelPhone;
+	@Column(name="hotel_name")
+	private String hotelAddress;
+	@Column(name="hotel_area")
+	private String hotelArea;
+	@Column(name="hotel_url")
+	private String hotelUrl;
+	@Column(name="hotel_img")
+	private String hotelImg;
+	@Column(name="hotel_star")
+	private Integer hotelStar;
+	@Column(name="hotel_score_avg")
+	private Double hotelScoreAvg;
+	@Column(name="hotel_language")
+	private String hotelLanguage;
+	@Column(name="hotel_wifi")
+	private Boolean hotelWifi;
+	@Column(name="hotel_food")
+	private String hotelFood;
+	@Column(name="hotel_convinience")
+	private String hotelConvinience;
+	@Column(name="hotel_checkInTime")
+	private Time hotelCheckInTime;
+	@Column(name="hotel_checkOutTime")
+	private Time hotelCheckOutTime;
+	@Column(name="hotel_floor")
+	private Integer hotelFloor;
+	@Column(name="hotel_roomAmount")
+	private Integer hotelRoomAmount;
+	@Column(name="hotel_score_times")
+	private Integer hotelScoreTimes;
 	
 	
 	public HotelBean() { }
-	public HotelBean(String hotel_id, String hotel_name, String hotel_phone, String hotel_address, String hotel_area,
-			String hotel_url, String hotel_img, Integer hotel_star, Double hotel_score_avg, String hotel_language,
-			Boolean hotel_wifi, String hotel_food, String hotel_convinience, Time hotel_checkInTime,
-			Time hotel_checkOutTime, Integer hotel_floor, Integer hotel_roomAmount, Integer hotel_score_times) {
+
+
+	public HotelBean(String hotelId, String hotelName, String hotelPhone, String hotelAddress, String hotelArea,
+			String hotelUrl, String hotelImg, Integer hotelStar, Double hotelScoreAvg, String hotelLanguage,
+			Boolean hotelWifi, String hotelFood, String hotelConvinience, Time hotelCheckInTime, Time hotelCheckOutTime,
+			Integer hotelFloor, Integer hotelRoomAmount, Integer hotelScoreTimes) {
 		super();
-		Hotel_id = hotel_id;
-		Hotel_name = hotel_name;
-		Hotel_phone = hotel_phone;
-		Hotel_address = hotel_address;
-		Hotel_area = hotel_area;
-		Hotel_url = hotel_url;
-		Hotel_img = hotel_img;
-		Hotel_star = hotel_star;
-		Hotel_score_avg = hotel_score_avg;
-		Hotel_language = hotel_language;
-		Hotel_wifi = hotel_wifi;
-		Hotel_food = hotel_food;
-		Hotel_convinience = hotel_convinience;
-		Hotel_checkInTime = hotel_checkInTime;
-		Hotel_checkOutTime = hotel_checkOutTime;
-		Hotel_floor = hotel_floor;
-		Hotel_roomAmount = hotel_roomAmount;
-		Hotel_score_times = hotel_score_times;
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+		this.hotelPhone = hotelPhone;
+		this.hotelAddress = hotelAddress;
+		this.hotelArea = hotelArea;
+		this.hotelUrl = hotelUrl;
+		this.hotelImg = hotelImg;
+		this.hotelStar = hotelStar;
+		this.hotelScoreAvg = hotelScoreAvg;
+		this.hotelLanguage = hotelLanguage;
+		this.hotelWifi = hotelWifi;
+		this.hotelFood = hotelFood;
+		this.hotelConvinience = hotelConvinience;
+		this.hotelCheckInTime = hotelCheckInTime;
+		this.hotelCheckOutTime = hotelCheckOutTime;
+		this.hotelFloor = hotelFloor;
+		this.hotelRoomAmount = hotelRoomAmount;
+		this.hotelScoreTimes = hotelScoreTimes;
 	}
+
+
 	@Override
 	public String toString() {
-		return "HotelBean [Hotel_id=" + Hotel_id + ", Hotel_name=" + Hotel_name + ", Hotel_phone=" + Hotel_phone
-				+ ", Hotel_address=" + Hotel_address + ", Hotel_area=" + Hotel_area + ", Hotel_url=" + Hotel_url
-				+ ", Hotel_img=" + Hotel_img + ", Hotel_star=" + Hotel_star + ", Hotel_score_avg=" + Hotel_score_avg
-				+ ", Hotel_language=" + Hotel_language + ", Hotel_wifi=" + Hotel_wifi + ", Hotel_food=" + Hotel_food
-				+ ", Hotel_convinience=" + Hotel_convinience + ", Hotel_checkInTime=" + Hotel_checkInTime
-				+ ", Hotel_checkOutTime=" + Hotel_checkOutTime + ", Hotel_floor=" + Hotel_floor + ", Hotel_roomAmount="
-				+ Hotel_roomAmount + ", Hotel_score_times=" + Hotel_score_times + "]";
+		return "HotelBean [hotelId=" + hotelId + ", hotelName=" + hotelName + ", hotelPhone=" + hotelPhone
+				+ ", hotelAddress=" + hotelAddress + ", hotelArea=" + hotelArea + ", hotelUrl=" + hotelUrl
+				+ ", hotelImg=" + hotelImg + ", hotelStar=" + hotelStar + ", hotelScoreAvg=" + hotelScoreAvg
+				+ ", hotelLanguage=" + hotelLanguage + ", hotelWifi=" + hotelWifi + ", hotelFood=" + hotelFood
+				+ ", hotelConvinience=" + hotelConvinience + ", hotelCheckInTime=" + hotelCheckInTime
+				+ ", hotelCheckOutTime=" + hotelCheckOutTime + ", hotelFloor=" + hotelFloor + ", hotelRoomAmount="
+				+ hotelRoomAmount + ", hotelScoreTimes=" + hotelScoreTimes + "]";
 	}
-	public String getHotel_id() {
-		return Hotel_id;
+
+
+	public String getHotelId() {
+		return hotelId;
 	}
-	public void setHotel_id(String hotel_id) {
-		Hotel_id = hotel_id;
+
+
+	public void setHotelId(String hotelId) {
+		this.hotelId = hotelId;
 	}
-	public String getHotel_name() {
-		return Hotel_name;
+
+
+	public String getHotelName() {
+		return hotelName;
 	}
-	public void setHotel_name(String hotel_name) {
-		Hotel_name = hotel_name;
+
+
+	public void setHotelName(String hotelName) {
+		this.hotelName = hotelName;
 	}
-	public String getHotel_phone() {
-		return Hotel_phone;
+
+
+	public String getHotelPhone() {
+		return hotelPhone;
 	}
-	public void setHotel_phone(String hotel_phone) {
-		Hotel_phone = hotel_phone;
+
+
+	public void setHotelPhone(String hotelPhone) {
+		this.hotelPhone = hotelPhone;
 	}
-	public String getHotel_address() {
-		return Hotel_address;
+
+
+	public String getHotelAddress() {
+		return hotelAddress;
 	}
-	public void setHotel_address(String hotel_address) {
-		Hotel_address = hotel_address;
+
+
+	public void setHotelAddress(String hotelAddress) {
+		this.hotelAddress = hotelAddress;
 	}
-	public String getHotel_area() {
-		return Hotel_area;
+
+
+	public String getHotelArea() {
+		return hotelArea;
 	}
-	public void setHotel_area(String hotel_area) {
-		Hotel_area = hotel_area;
+
+
+	public void setHotelArea(String hotelArea) {
+		this.hotelArea = hotelArea;
 	}
-	public String getHotel_url() {
-		return Hotel_url;
+
+
+	public String getHotelUrl() {
+		return hotelUrl;
 	}
-	public void setHotel_url(String hotel_url) {
-		Hotel_url = hotel_url;
+
+
+	public void setHotelUrl(String hotelUrl) {
+		this.hotelUrl = hotelUrl;
 	}
-	public String getHotel_img() {
-		return Hotel_img;
+
+
+	public String getHotelImg() {
+		return hotelImg;
 	}
-	public void setHotel_img(String hotel_img) {
-		Hotel_img = hotel_img;
+
+
+	public void setHotelImg(String hotelImg) {
+		this.hotelImg = hotelImg;
 	}
-	public Integer getHotel_star() {
-		return Hotel_star;
+
+
+	public Integer getHotelStar() {
+		return hotelStar;
 	}
-	public void setHotel_star(Integer hotel_star) {
-		Hotel_star = hotel_star;
+
+
+	public void setHotelStar(Integer hotelStar) {
+		this.hotelStar = hotelStar;
 	}
-	public Double getHotel_score_avg() {
-		return Hotel_score_avg;
+
+
+	public Double getHotelScoreAvg() {
+		return hotelScoreAvg;
 	}
-	public void setHotel_score_avg(Double hotel_score_avg) {
-		Hotel_score_avg = hotel_score_avg;
+
+
+	public void setHotelScoreAvg(Double hotelScoreAvg) {
+		this.hotelScoreAvg = hotelScoreAvg;
 	}
-	public String getHotel_language() {
-		return Hotel_language;
+
+
+	public String getHotelLanguage() {
+		return hotelLanguage;
 	}
-	public void setHotel_language(String hotel_language) {
-		Hotel_language = hotel_language;
+
+
+	public void setHotelLanguage(String hotelLanguage) {
+		this.hotelLanguage = hotelLanguage;
 	}
-	public Boolean getHotel_wifi() {
-		return Hotel_wifi;
+
+
+	public Boolean getHotelWifi() {
+		return hotelWifi;
 	}
-	public void setHotel_wifi(Boolean hotel_wifi) {
-		Hotel_wifi = hotel_wifi;
+
+
+	public void setHotelWifi(Boolean hotelWifi) {
+		this.hotelWifi = hotelWifi;
 	}
-	public String getHotel_food() {
-		return Hotel_food;
+
+
+	public String getHotelFood() {
+		return hotelFood;
 	}
-	public void setHotel_food(String hotel_food) {
-		Hotel_food = hotel_food;
+
+
+	public void setHotelFood(String hotelFood) {
+		this.hotelFood = hotelFood;
 	}
-	public String getHotel_convinience() {
-		return Hotel_convinience;
+
+
+	public String getHotelConvinience() {
+		return hotelConvinience;
 	}
-	public void setHotel_convinience(String hotel_convinience) {
-		Hotel_convinience = hotel_convinience;
+
+
+	public void setHotelConvinience(String hotelConvinience) {
+		this.hotelConvinience = hotelConvinience;
 	}
-	public Time getHotel_checkInTime() {
-		return Hotel_checkInTime;
+
+
+	public Time getHotelCheckInTime() {
+		return hotelCheckInTime;
 	}
-	public void setHotel_checkInTime(Time hotel_checkInTime) {
-		Hotel_checkInTime = hotel_checkInTime;
+
+
+	public void setHotelCheckInTime(Time hotelCheckInTime) {
+		this.hotelCheckInTime = hotelCheckInTime;
 	}
-	public Time getHotel_checkOutTime() {
-		return Hotel_checkOutTime;
+
+
+	public Time getHotelCheckOutTime() {
+		return hotelCheckOutTime;
 	}
-	public void setHotel_checkOutTime(Time hotel_checkOutTime) {
-		Hotel_checkOutTime = hotel_checkOutTime;
+
+
+	public void setHotelCheckOutTime(Time hotelCheckOutTime) {
+		this.hotelCheckOutTime = hotelCheckOutTime;
 	}
-	public Integer getHotel_floor() {
-		return Hotel_floor;
+
+
+	public Integer getHotelFloor() {
+		return hotelFloor;
 	}
-	public void setHotel_floor(Integer hotel_floor) {
-		Hotel_floor = hotel_floor;
+
+
+	public void setHotelFloor(Integer hotelFloor) {
+		this.hotelFloor = hotelFloor;
 	}
-	public Integer getHotel_roomAmount() {
-		return Hotel_roomAmount;
+
+
+	public Integer getHotelRoomAmount() {
+		return hotelRoomAmount;
 	}
-	public void setHotel_roomAmount(Integer hotel_roomAmount) {
-		Hotel_roomAmount = hotel_roomAmount;
+
+
+	public void setHotelRoomAmount(Integer hotelRoomAmount) {
+		this.hotelRoomAmount = hotelRoomAmount;
 	}
-	public Integer getHotel_score_times() {
-		return Hotel_score_times;
+
+
+	public Integer getHotelScoreTimes() {
+		return hotelScoreTimes;
 	}
-	public void setHotel_score_times(Integer hotel_score_times) {
-		Hotel_score_times = hotel_score_times;
+
+
+	public void setHotelScoreTimes(Integer hotelScoreTimes) {
+		this.hotelScoreTimes = hotelScoreTimes;
 	}
 	
 }

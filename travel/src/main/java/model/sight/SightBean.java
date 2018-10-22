@@ -16,200 +16,203 @@ import model.sight_type.SightTypeBean;
 @Table(name="Sight")
 public class SightBean {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Sight_id;
-	@Column(columnDefinition="char(2)")
-	private String Sight_type;
-	@Column(columnDefinition="char(4)")
-	private String Sight_type_id;
-	@Column(columnDefinition="nvarchar(100)")
-	private String Sight_name;
-	@Column(columnDefinition="varchar(50)")
-	private String Sight_phone;
-	@Column(columnDefinition="nvarchar(max)")
-	private String Sight_address;
-	@Column(columnDefinition="nvarchar(10)")
-	private String Sight_area;
-	@Column(columnDefinition="nvarchar(max)")
-	private String Sight_url;
-	@Column(columnDefinition="nvarchar(max)")
-	private String Sight_description;
-	@Column(columnDefinition="varchar(max)")
-	private String Sight_img;
-	@Column(columnDefinition="varchar(max)")
-	private String Sight_bussinessHours;
-	@Column(columnDefinition="varchar(max)")
-	private Time Sight_estimatedTime;
-	private Double Sight_score_avg;
-	private Boolean Sight_ticket;
-	private Integer Sight_price;
+	@Column(name="sight_id")
+	private String sightId;
+	@Column(name="sight_type")
+	private String sightType;
+	@Column(name="sight_type_id")
+	private String sightTypeId;
+	@Column(name="sight_name")
+	private String sightName;
+	@Column(name="sight_phone")
+	private String sightPhone;
+	@Column(name="sight_address")
+	private String sightAddress;
+	@Column(name="sight_area")
+	private String sightArea;
+	@Column(name="sight_url")
+	private String sightUrl;
+	@Column(name="sight_description")
+	private String sightDescription;
+	@Column(name="sight_img")
+	private String sightImg;
+	@Column(name="sight_bussinessHours")
+	private String sightBussinessHours;
+	@Column(name="sight_estimatedTime")
+	private Time sightEstimatedTime;
+	@Column(name="sight_score_avg")
+	private Double sightScoreAvg;
+	@Column(name="sight_ticket")
+	private Boolean sightTicket;
+	@Column(name="sight_price")
+	private Integer sightPrice;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Sight_type_id")
-	private SightTypeBean SightTypeBean;
+	@JoinColumn(name="sight_type_id")
+	private SightTypeBean sightTypeBean;
 	
 	public SightBean() { }
 
-	public SightBean(String sight_id, String sight_type, String sight_type_id, String sight_name, String sight_phone,
-			String sight_address, String sight_area, String sight_url, String sight_description, String sight_img,
-			String sight_bussinessHours, Time sight_estimatedTime, Double sight_score_avg, Boolean sight_ticket,
-			Integer sight_price, SightTypeBean sightTypeBean) {
+	public SightBean(String sightId, String sightType, String sightTypeId, String sightName, String sightPhone,
+			String sightAddress, String sightArea, String sightUrl, String sightDescription, String sightImg,
+			String sightBussinessHours, Time sightEstimatedTime, Double sightScoreAvg, Boolean sightTicket,
+			Integer sightPrice, SightTypeBean sightTypeBean) {
 		super();
-		Sight_id = sight_id;
-		Sight_type = sight_type;
-		Sight_type_id = sight_type_id;
-		Sight_name = sight_name;
-		Sight_phone = sight_phone;
-		Sight_address = sight_address;
-		Sight_area = sight_area;
-		Sight_url = sight_url;
-		Sight_description = sight_description;
-		Sight_img = sight_img;
-		Sight_bussinessHours = sight_bussinessHours;
-		Sight_estimatedTime = sight_estimatedTime;
-		Sight_score_avg = sight_score_avg;
-		Sight_ticket = sight_ticket;
-		Sight_price = sight_price;
-		SightTypeBean = sightTypeBean;
+		this.sightId = sightId;
+		this.sightType = sightType;
+		this.sightTypeId = sightTypeId;
+		this.sightName = sightName;
+		this.sightPhone = sightPhone;
+		this.sightAddress = sightAddress;
+		this.sightArea = sightArea;
+		this.sightUrl = sightUrl;
+		this.sightDescription = sightDescription;
+		this.sightImg = sightImg;
+		this.sightBussinessHours = sightBussinessHours;
+		this.sightEstimatedTime = sightEstimatedTime;
+		this.sightScoreAvg = sightScoreAvg;
+		this.sightTicket = sightTicket;
+		this.sightPrice = sightPrice;
+		this.sightTypeBean = sightTypeBean;
 	}
 
 	@Override
 	public String toString() {
-		return "SightBean [Sight_id=" + Sight_id + ", Sight_type=" + Sight_type + ", Sight_type_id=" + Sight_type_id
-				+ ", Sight_name=" + Sight_name + ", Sight_phone=" + Sight_phone + ", Sight_address=" + Sight_address
-				+ ", Sight_area=" + Sight_area + ", Sight_url=" + Sight_url + ", Sight_description=" + Sight_description
-				+ ", Sight_img=" + Sight_img + ", Sight_bussinessHours=" + Sight_bussinessHours
-				+ ", Sight_estimatedTime=" + Sight_estimatedTime + ", Sight_score_avg=" + Sight_score_avg
-				+ ", Sight_ticket=" + Sight_ticket + ", Sight_price=" + Sight_price + ", SightTypeBean=" + SightTypeBean
-				+ "]";
+		return "SightBean [sightId=" + sightId + ", sightType=" + sightType + ", sightTypeId=" + sightTypeId
+				+ ", sightName=" + sightName + ", sightPhone=" + sightPhone + ", sightAddress=" + sightAddress
+				+ ", sightArea=" + sightArea + ", sightUrl=" + sightUrl + ", sightDescription=" + sightDescription
+				+ ", sightImg=" + sightImg + ", sightBussinessHours=" + sightBussinessHours + ", sightEstimatedTime="
+				+ sightEstimatedTime + ", sightScoreAvg=" + sightScoreAvg + ", sightTicket=" + sightTicket
+				+ ", sightPrice=" + sightPrice + "]";
 	}
 
-	public String getSight_id() {
-		return Sight_id;
+	public String getSightId() {
+		return sightId;
 	}
 
-	public void setSight_id(String sight_id) {
-		Sight_id = sight_id;
+	public void setSightId(String sightId) {
+		this.sightId = sightId;
 	}
 
-	public String getSight_type() {
-		return Sight_type;
+	public String getSightType() {
+		return sightType;
 	}
 
-	public void setSight_type(String sight_type) {
-		Sight_type = sight_type;
+	public void setSightType(String sightType) {
+		this.sightType = sightType;
 	}
 
-	public String getSight_type_id() {
-		return Sight_type_id;
+	public String getSightTypeId() {
+		return sightTypeId;
 	}
 
-	public void setSight_type_id(String sight_type_id) {
-		Sight_type_id = sight_type_id;
+	public void setSightTypeId(String sightTypeId) {
+		this.sightTypeId = sightTypeId;
 	}
 
-	public String getSight_name() {
-		return Sight_name;
+	public String getSightName() {
+		return sightName;
 	}
 
-	public void setSight_name(String sight_name) {
-		Sight_name = sight_name;
+	public void setSightName(String sightName) {
+		this.sightName = sightName;
 	}
 
-	public String getSight_phone() {
-		return Sight_phone;
+	public String getSightPhone() {
+		return sightPhone;
 	}
 
-	public void setSight_phone(String sight_phone) {
-		Sight_phone = sight_phone;
+	public void setSightPhone(String sightPhone) {
+		this.sightPhone = sightPhone;
 	}
 
-	public String getSight_address() {
-		return Sight_address;
+	public String getSightAddress() {
+		return sightAddress;
 	}
 
-	public void setSight_address(String sight_address) {
-		Sight_address = sight_address;
+	public void setSightAddress(String sightAddress) {
+		this.sightAddress = sightAddress;
 	}
 
-	public String getSight_area() {
-		return Sight_area;
+	public String getSightArea() {
+		return sightArea;
 	}
 
-	public void setSight_area(String sight_area) {
-		Sight_area = sight_area;
+	public void setSightArea(String sightArea) {
+		this.sightArea = sightArea;
 	}
 
-	public String getSight_url() {
-		return Sight_url;
+	public String getSightUrl() {
+		return sightUrl;
 	}
 
-	public void setSight_url(String sight_url) {
-		Sight_url = sight_url;
+	public void setSightUrl(String sightUrl) {
+		this.sightUrl = sightUrl;
 	}
 
-	public String getSight_description() {
-		return Sight_description;
+	public String getSightDescription() {
+		return sightDescription;
 	}
 
-	public void setSight_description(String sight_description) {
-		Sight_description = sight_description;
+	public void setSightDescription(String sightDescription) {
+		this.sightDescription = sightDescription;
 	}
 
-	public String getSight_img() {
-		return Sight_img;
+	public String getSightImg() {
+		return sightImg;
 	}
 
-	public void setSight_img(String sight_img) {
-		Sight_img = sight_img;
+	public void setSightImg(String sightImg) {
+		this.sightImg = sightImg;
 	}
 
-	public String getSight_bussinessHours() {
-		return Sight_bussinessHours;
+	public String getSightBussinessHours() {
+		return sightBussinessHours;
 	}
 
-	public void setSight_bussinessHours(String sight_bussinessHours) {
-		Sight_bussinessHours = sight_bussinessHours;
+	public void setSightBussinessHours(String sightBussinessHours) {
+		this.sightBussinessHours = sightBussinessHours;
 	}
 
-	public Time getSight_estimatedTime() {
-		return Sight_estimatedTime;
+	public Time getSightEstimatedTime() {
+		return sightEstimatedTime;
 	}
 
-	public void setSight_estimatedTime(Time sight_estimatedTime) {
-		Sight_estimatedTime = sight_estimatedTime;
+	public void setSightEstimatedTime(Time sightEstimatedTime) {
+		this.sightEstimatedTime = sightEstimatedTime;
 	}
 
-	public Double getSight_score_avg() {
-		return Sight_score_avg;
+	public Double getSightScoreAvg() {
+		return sightScoreAvg;
 	}
 
-	public void setSight_score_avg(Double sight_score_avg) {
-		Sight_score_avg = sight_score_avg;
+	public void setSightScoreAvg(Double sightScoreAvg) {
+		this.sightScoreAvg = sightScoreAvg;
 	}
 
-	public Boolean getSight_ticket() {
-		return Sight_ticket;
+	public Boolean getSightTicket() {
+		return sightTicket;
 	}
 
-	public void setSight_ticket(Boolean sight_ticket) {
-		Sight_ticket = sight_ticket;
+	public void setSightTicket(Boolean sightTicket) {
+		this.sightTicket = sightTicket;
 	}
 
-	public Integer getSight_price() {
-		return Sight_price;
+	public Integer getSightPrice() {
+		return sightPrice;
 	}
 
-	public void setSight_price(Integer sight_price) {
-		Sight_price = sight_price;
+	public void setSightPrice(Integer sightPrice) {
+		this.sightPrice = sightPrice;
 	}
 
 	public SightTypeBean getSightTypeBean() {
-		return SightTypeBean;
+		return sightTypeBean;
 	}
 
 	public void setSightTypeBean(SightTypeBean sightTypeBean) {
-		SightTypeBean = sightTypeBean;
+		this.sightTypeBean = sightTypeBean;
 	}
+
 	
 	
 }

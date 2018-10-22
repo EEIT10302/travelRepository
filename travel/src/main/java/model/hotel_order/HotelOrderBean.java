@@ -20,228 +20,260 @@ import model.national.NationalBean;
 @Table(name="Hotel_order")
 public class HotelOrderBean{
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String H_order_id;
-	@Column(columnDefinition="char(10)")
-	private String Customer_id;
-	@Column(columnDefinition="char(8)")
-	private String Hotel_id;
-	@Column(columnDefinition="char(10)")
-	private String Room_id;
-	@Column(columnDefinition="char(2)")
-	private String H_order_national;
-	@Column(columnDefinition="varchar(50)")
-	private String H_order_firstName;
-	@Column(columnDefinition="varchar(50)")
-	private String H_order_lastName;
-	@Column(columnDefinition="varchar(50)")
-	private String H_order_phone;
-	@Column(columnDefinition="varchar(100)")
-	private String H_order_email;
-	private Date H_order_checkIn;
-	private Date H_order_checkOut;
-	private Integer H_order_total;
-	@Column(columnDefinition="varchar(50)")
-	private String H_stay_firstName;
-	@Column(columnDefinition="varchar(50)")
-	private String H_stay_lastName;
-	@Column(columnDefinition="varchar(50)")
-	private String H_stay_phone;
-	@Column(columnDefinition="varchar(100)")
-	private String H_stay_email;
-	@Column(columnDefinition="char(2)")
-	private String H_stay_national;
-	private Integer H_score;
-	@Column(columnDefinition="nvarchar(max)")
-	private String H_message;
+	@Column(name="H_order_id")
+	private String hOrderId;
+	@Column(name="customer_id")
+	private String customerId;
+	@Column(name="hotel_id")
+	private String hotelId;
+	@Column(name="room_id")
+	private String roomId;
+	@Column(name="H_order_national")
+	private String hOrderNational;
+	@Column(name="H_order_firstName")
+	private String hOrderFirstName;
+	@Column(name="H_order_firstName")
+	private String hOrderLastName;
+	@Column(name="H_order_phone")
+	private String hOrderPhone;
+	@Column(name="H_order_email")
+	private String hOrderEmail;
+	@Column(name="H_order_checkIn")
+	private Date hOrderCheckIn;
+	@Column(name="H_order_checkOut")
+	private Date hOrderCheckOut;
+	@Column(name="H_order_total")
+	private Integer hOrderTotal;
+	@Column(name="H_stay_firstName")
+	private String hStayFirstName;
+	@Column(name="H_stay_lastName")
+	private String hStayLastName;
+	@Column(name="H_stay_phone")
+	private String hStayPhone;
+	@Column(name="H_stay_email")
+	private String hStayEmail;
+	@Column(name="H_stay_national")
+	private String hStayNational;
+	@Column(name="H_score")
+	private Integer hScore;
+	@Column(name="H_message")
+	private String hMessage;
+	
 	@OneToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="H_order_national")
-	private NationalBean NationalBean; 
-//	@ManyToOne(cascade=CascadeType.MERGE)
-//	@JoinColumn(name="Customer_id")
-//	private CustomerBean CustomerBean;
+	private NationalBean nationalBean; 
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Room_id")
-	private HotelRoomBean HotelRoomBean;
-//	@ManyToOne(cascade=CascadeType.MERGE)
-//	@JoinColumn(name="Hotel_id")
-//	private HotelBean HotelBean;
+	@JoinColumn(name="room_id")
+	private HotelRoomBean hotelRoomBean;
 	
 	public HotelOrderBean() { }
 
-	public HotelOrderBean(String h_order_id, String customer_id, String hotel_id, String room_id,
-			String h_order_national, String h_order_firstName, String h_order_lastName, String h_order_phone,
-			String h_order_email, Date h_order_checkIn, Date h_order_checkOut, Integer h_order_total,
-			String h_stay_firstName, String h_stay_lastName, String h_stay_phone, String h_stay_email,
-			String h_stay_national, Integer h_score, String h_message, NationalBean nationalBean,
-			CustomerBean customerBean, HotelRoomBean hotelRoomBean,
-			HotelBean hotelBean) {
+	public HotelOrderBean(String hOrderId, String customerId, String hotelId, String roomId, String hOrderNational,
+			String hOrderFirstName, String hOrderLastName, String hOrderPhone, String hOrderEmail, Date hOrderCheckIn,
+			Date hOrderCheckOut, Integer hOrderTotal, String hStayFirstName, String hStayLastName, String hStayPhone,
+			String hStayEmail, String hStayNational, Integer hScore, String hMessage, NationalBean nationalBean,
+			HotelRoomBean hotelRoomBean) {
 		super();
-		H_order_id = h_order_id;
-		Customer_id = customer_id;
-		Hotel_id = hotel_id;
-		Room_id = room_id;
-		H_order_national = h_order_national;
-		H_order_firstName = h_order_firstName;
-		H_order_lastName = h_order_lastName;
-		H_order_phone = h_order_phone;
-		H_order_email = h_order_email;
-		H_order_checkIn = h_order_checkIn;
-		H_order_checkOut = h_order_checkOut;
-		H_order_total = h_order_total;
-		H_stay_firstName = h_stay_firstName;
-		H_stay_lastName = h_stay_lastName;
-		H_stay_phone = h_stay_phone;
-		H_stay_email = h_stay_email;
-		H_stay_national = h_stay_national;
-		H_score = h_score;
-		H_message = h_message;
-		NationalBean = nationalBean;
-		HotelRoomBean = hotelRoomBean;
+		this.hOrderId = hOrderId;
+		this.customerId = customerId;
+		this.hotelId = hotelId;
+		this.roomId = roomId;
+		this.hOrderNational = hOrderNational;
+		this.hOrderFirstName = hOrderFirstName;
+		this.hOrderLastName = hOrderLastName;
+		this.hOrderPhone = hOrderPhone;
+		this.hOrderEmail = hOrderEmail;
+		this.hOrderCheckIn = hOrderCheckIn;
+		this.hOrderCheckOut = hOrderCheckOut;
+		this.hOrderTotal = hOrderTotal;
+		this.hStayFirstName = hStayFirstName;
+		this.hStayLastName = hStayLastName;
+		this.hStayPhone = hStayPhone;
+		this.hStayEmail = hStayEmail;
+		this.hStayNational = hStayNational;
+		this.hScore = hScore;
+		this.hMessage = hMessage;
+		this.nationalBean = nationalBean;
+		this.hotelRoomBean = hotelRoomBean;
 	}
 
 	@Override
 	public String toString() {
-		return "HotelOrderBean [H_order_id=" + H_order_id + ", Customer_id=" + Customer_id + ", Hotel_id=" + Hotel_id
-				+ ", Room_id=" + Room_id + ", H_order_national=" + H_order_national + ", H_order_firstName="
-				+ H_order_firstName + ", H_order_lastName=" + H_order_lastName + ", H_order_phone=" + H_order_phone
-				+ ", H_order_email=" + H_order_email + ", H_order_checkIn=" + H_order_checkIn + ", H_order_checkOut="
-				+ H_order_checkOut + ", H_order_total=" + H_order_total + ", H_stay_firstName=" + H_stay_firstName
-				+ ", H_stay_lastName=" + H_stay_lastName + ", H_stay_phone=" + H_stay_phone + ", H_stay_email="
-				+ H_stay_email + ", H_stay_national=" + H_stay_national + ", H_score=" + H_score + ", H_message="
-				+ H_message + ", NationalBean=" + NationalBean + ", CustomerBean=" + ", HotelRoomBean="
-				+ HotelRoomBean + ", HotelBean=" + "]";
-	}
-	
-	
-	public String getH_order_id() {
-		return H_order_id;
-	}
-	public void setH_order_id(String h_order_id) {
-		H_order_id = h_order_id;
-	}
-	public String getCustomer_id() {
-		return Customer_id;
-	}
-	public void setCustomer_id(String customer_id) {
-		Customer_id = customer_id;
-	}
-	public String getHotel_id() {
-		return Hotel_id;
-	}
-	public void setHotel_id(String hotel_id) {
-		Hotel_id = hotel_id;
-	}
-	public String getRoom_id() {
-		return Room_id;
-	}
-	public void setRoom_id(String room_id) {
-		Room_id = room_id;
-	}
-	public String getH_order_national() {
-		return H_order_national;
-	}
-	public void setH_order_national(String h_order_national) {
-		H_order_national = h_order_national;
-	}
-	public String getH_order_firstName() {
-		return H_order_firstName;
-	}
-	public void setH_order_firstName(String h_order_firstName) {
-		H_order_firstName = h_order_firstName;
-	}
-	public String getH_order_lastName() {
-		return H_order_lastName;
-	}
-	public void setH_order_lastName(String h_order_lastName) {
-		H_order_lastName = h_order_lastName;
+		return "HotelOrderBean [hOrderId=" + hOrderId + ", customerId=" + customerId + ", hotelId=" + hotelId
+				+ ", roomId=" + roomId + ", hOrderNational=" + hOrderNational + ", hOrderFirstName=" + hOrderFirstName
+				+ ", hOrderLastName=" + hOrderLastName + ", hOrderPhone=" + hOrderPhone + ", hOrderEmail=" + hOrderEmail
+				+ ", hOrderCheckIn=" + hOrderCheckIn + ", hOrderCheckOut=" + hOrderCheckOut + ", hOrderTotal="
+				+ hOrderTotal + ", hStayFirstName=" + hStayFirstName + ", hStayLastName=" + hStayLastName
+				+ ", hStayPhone=" + hStayPhone + ", hStayEmail=" + hStayEmail + ", hStayNational=" + hStayNational
+				+ ", hScore=" + hScore + ", hMessage=" + hMessage + "]";
 	}
 
-	public String getH_order_phone() {
-		return H_order_phone;
+	public String gethOrderId() {
+		return hOrderId;
 	}
-	public void setH_order_phone(String h_order_phone) {
-		H_order_phone = h_order_phone;
+
+	public void sethOrderId(String hOrderId) {
+		this.hOrderId = hOrderId;
 	}
-	public String getH_order_email() {
-		return H_order_email;
+
+	public String getCustomerId() {
+		return customerId;
 	}
-	public void setH_order_email(String h_order_email) {
-		H_order_email = h_order_email;
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
-	public Date getH_order_checkIn() {
-		return H_order_checkIn;
+
+	public String getHotelId() {
+		return hotelId;
 	}
-	public void setH_order_checkIn(Date h_order_checkIn) {
-		H_order_checkIn = h_order_checkIn;
+
+	public void setHotelId(String hotelId) {
+		this.hotelId = hotelId;
 	}
-	public Date getH_order_checkOut() {
-		return H_order_checkOut;
+
+	public String getRoomId() {
+		return roomId;
 	}
-	public void setH_order_checkOut(Date h_order_checkOut) {
-		H_order_checkOut = h_order_checkOut;
+
+	public void setRoomId(String roomId) {
+		this.roomId = roomId;
 	}
-	public Integer getH_order_total() {
-		return H_order_total;
+
+	public String gethOrderNational() {
+		return hOrderNational;
 	}
-	public void setH_order_total(Integer h_order_total) {
-		H_order_total = h_order_total;
+
+	public void sethOrderNational(String hOrderNational) {
+		this.hOrderNational = hOrderNational;
 	}
-	public String getH_stay_firstName() {
-		return H_stay_firstName;
+
+	public String gethOrderFirstName() {
+		return hOrderFirstName;
 	}
-	public void setH_stay_firstName(String h_stay_firstName) {
-		H_stay_firstName = h_stay_firstName;
+
+	public void sethOrderFirstName(String hOrderFirstName) {
+		this.hOrderFirstName = hOrderFirstName;
 	}
-	public String getH_stay_lastName() {
-		return H_stay_lastName;
+
+	public String gethOrderLastName() {
+		return hOrderLastName;
 	}
-	public void setH_stay_lastName(String h_stay_lastName) {
-		H_stay_lastName = h_stay_lastName;
+
+	public void sethOrderLastName(String hOrderLastName) {
+		this.hOrderLastName = hOrderLastName;
 	}
-	public String getH_stay_phone() {
-		return H_stay_phone;
+
+	public String gethOrderPhone() {
+		return hOrderPhone;
 	}
-	public void setH_stay_phone(String h_stay_phone) {
-		H_stay_phone = h_stay_phone;
+
+	public void sethOrderPhone(String hOrderPhone) {
+		this.hOrderPhone = hOrderPhone;
 	}
-	public String getH_stay_email() {
-		return H_stay_email;
+
+	public String gethOrderEmail() {
+		return hOrderEmail;
 	}
-	public void setH_stay_email(String h_stay_email) {
-		H_stay_email = h_stay_email;
+
+	public void sethOrderEmail(String hOrderEmail) {
+		this.hOrderEmail = hOrderEmail;
 	}
-	public String getH_stay_national() {
-		return H_stay_national;
+
+	public Date gethOrderCheckIn() {
+		return hOrderCheckIn;
 	}
-	public void setH_stay_national(String h_stay_national) {
-		H_stay_national = h_stay_national;
+
+	public void sethOrderCheckIn(Date hOrderCheckIn) {
+		this.hOrderCheckIn = hOrderCheckIn;
 	}
-	public Integer getH_score() {
-		return H_score;
+
+	public Date gethOrderCheckOut() {
+		return hOrderCheckOut;
 	}
-	public void setH_score(Integer h_score) {
-		H_score = h_score;
+
+	public void sethOrderCheckOut(Date hOrderCheckOut) {
+		this.hOrderCheckOut = hOrderCheckOut;
 	}
-	public String getH_message() {
-		return H_message;
+
+	public Integer gethOrderTotal() {
+		return hOrderTotal;
 	}
-	public void setH_message(String h_message) {
-		H_message = h_message;
+
+	public void sethOrderTotal(Integer hOrderTotal) {
+		this.hOrderTotal = hOrderTotal;
 	}
+
+	public String gethStayFirstName() {
+		return hStayFirstName;
+	}
+
+	public void sethStayFirstName(String hStayFirstName) {
+		this.hStayFirstName = hStayFirstName;
+	}
+
+	public String gethStayLastName() {
+		return hStayLastName;
+	}
+
+	public void sethStayLastName(String hStayLastName) {
+		this.hStayLastName = hStayLastName;
+	}
+
+	public String gethStayPhone() {
+		return hStayPhone;
+	}
+
+	public void sethStayPhone(String hStayPhone) {
+		this.hStayPhone = hStayPhone;
+	}
+
+	public String gethStayEmail() {
+		return hStayEmail;
+	}
+
+	public void sethStayEmail(String hStayEmail) {
+		this.hStayEmail = hStayEmail;
+	}
+
+	public String gethStayNational() {
+		return hStayNational;
+	}
+
+	public void sethStayNational(String hStayNational) {
+		this.hStayNational = hStayNational;
+	}
+
+	public Integer gethScore() {
+		return hScore;
+	}
+
+	public void sethScore(Integer hScore) {
+		this.hScore = hScore;
+	}
+
+	public String gethMessage() {
+		return hMessage;
+	}
+
+	public void sethMessage(String hMessage) {
+		this.hMessage = hMessage;
+	}
+
 	public NationalBean getNationalBean() {
-		return NationalBean;
+		return nationalBean;
 	}
+
 	public void setNationalBean(NationalBean nationalBean) {
-		NationalBean = nationalBean;
+		this.nationalBean = nationalBean;
 	}
 
 	public HotelRoomBean getHotelRoomBean() {
-		return HotelRoomBean;
-	}
-	public void setHotelRoomBean(HotelRoomBean hotelRoomBean) {
-		HotelRoomBean = hotelRoomBean;
+		return hotelRoomBean;
 	}
 
+	public void setHotelRoomBean(HotelRoomBean hotelRoomBean) {
+		this.hotelRoomBean = hotelRoomBean;
+	}
 	
 }

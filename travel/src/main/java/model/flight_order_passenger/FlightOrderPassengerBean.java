@@ -18,144 +18,147 @@ import model.national.NationalBean;
 @Table(name="Flight_Order_Passenger")
 public class FlightOrderPassengerBean {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String F_order_id;
-	@Column(columnDefinition="varchar(50)")
-	private String F_passenger_firstName;
-	@Column(columnDefinition="varchar(50)")
-	private String F_passenger_lastName;
-	@Column(columnDefinition="char(2)")
-	private String F_passenger_national;
-	private Date F_passenger_birthday;
-	@Column(columnDefinition="varchar(50)")
-	private String F_passenger_phone;
-	private Boolean F_passenger_salutation;
-	private Integer F_adult_price;
-	private Integer F_child_price;
+	@Column(name="F_order_id")
+	private String fOrderId;
+	@Column(name="F_passenger_firstName")
+	private String fPassengerFirstName;
+	@Column(name="F_passenger_lastName")
+	private String fPassengerLastName;
+	@Column(name="F_passenger_national")
+	private String fPassengerNational;
+	@Column(name="F_passenger_birthday")
+	private Date fPassengerBirthday;
+	@Column(name="F_passenger_phone")
+	private String fPassengerPhone;
+	@Column(name="F_passenger_salutation")
+	private Boolean fPassengerSalutation;
+	@Column(name="F_adult_price")
+	private Integer fAdultPrice;
+	@Column(name="F_child_price")
+	private Integer fChildPrice;
 	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="F_order_id")
-	private FlightOrderBean FlightOrderBean;
+	private FlightOrderBean flightOrderBean;
 	@OneToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="F_passenger_national")
-	private NationalBean NationalBean;
+	private NationalBean nationalBean;
 	
 	public FlightOrderPassengerBean() { }
 
-	public FlightOrderPassengerBean(String f_order_id, String f_passenger_firstName, String f_passenger_lastName,
-			String f_passenger_national, Date f_passenger_birthday, String f_passenger_phone,
-			Boolean f_passenger_salutation, Integer f_adult_price, Integer f_child_price,
-			FlightOrderBean flightOrderBean, NationalBean nationalBean) {
+	public FlightOrderPassengerBean(String fOrderId, String fPassengerFirstName, String fPassengerLastName,
+			String fPassengerNational, Date fPassengerBirthday, String fPassengerPhone, Boolean fPassengerSalutation,
+			Integer fAdultPrice, Integer fChildPrice, FlightOrderBean flightOrderBean, NationalBean nationalBean) {
 		super();
-		F_order_id = f_order_id;
-		F_passenger_firstName = f_passenger_firstName;
-		F_passenger_lastName = f_passenger_lastName;
-		F_passenger_national = f_passenger_national;
-		F_passenger_birthday = f_passenger_birthday;
-		F_passenger_phone = f_passenger_phone;
-		F_passenger_salutation = f_passenger_salutation;
-		F_adult_price = f_adult_price;
-		F_child_price = f_child_price;
-		FlightOrderBean = flightOrderBean;
-		NationalBean = nationalBean;
+		this.fOrderId = fOrderId;
+		this.fPassengerFirstName = fPassengerFirstName;
+		this.fPassengerLastName = fPassengerLastName;
+		this.fPassengerNational = fPassengerNational;
+		this.fPassengerBirthday = fPassengerBirthday;
+		this.fPassengerPhone = fPassengerPhone;
+		this.fPassengerSalutation = fPassengerSalutation;
+		this.fAdultPrice = fAdultPrice;
+		this.fChildPrice = fChildPrice;
+		this.flightOrderBean = flightOrderBean;
+		this.nationalBean = nationalBean;
 	}
 
 	@Override
 	public String toString() {
-		return "FlightOrderPassengerBean [F_order_id=" + F_order_id + ", F_passenger_firstName=" + F_passenger_firstName
-				+ ", F_passenger_lastName=" + F_passenger_lastName + ", F_passenger_national=" + F_passenger_national
-				+ ", F_passenger_birthday=" + F_passenger_birthday + ", F_passenger_phone=" + F_passenger_phone
-				+ ", F_passenger_salutation=" + F_passenger_salutation + ", F_adult_price=" + F_adult_price
-				+ ", F_child_price=" + F_child_price + ", FlightOrderBean=" + FlightOrderBean + ", NationalBean="
-				+ NationalBean + "]";
+		return "FlightOrderPassengerBean [fOrderId=" + fOrderId + ", fPassengerFirstName=" + fPassengerFirstName
+				+ ", fPassengerLastName=" + fPassengerLastName + ", fPassengerNational=" + fPassengerNational
+				+ ", fPassengerBirthday=" + fPassengerBirthday + ", fPassengerPhone=" + fPassengerPhone
+				+ ", fPassengerSalutation=" + fPassengerSalutation + ", fAdultPrice=" + fAdultPrice + ", fChildPrice="
+				+ fChildPrice + "]";
 	}
 
-	public String getF_order_id() {
-		return F_order_id;
+	public String getfOrderId() {
+		return fOrderId;
 	}
 
-	public void setF_order_id(String f_order_id) {
-		F_order_id = f_order_id;
+	public void setfOrderId(String fOrderId) {
+		this.fOrderId = fOrderId;
 	}
 
-	public String getF_passenger_firstName() {
-		return F_passenger_firstName;
+	public String getfPassengerFirstName() {
+		return fPassengerFirstName;
 	}
 
-	public void setF_passenger_firstName(String f_passenger_firstName) {
-		F_passenger_firstName = f_passenger_firstName;
+	public void setfPassengerFirstName(String fPassengerFirstName) {
+		this.fPassengerFirstName = fPassengerFirstName;
 	}
 
-	public String getF_passenger_lastName() {
-		return F_passenger_lastName;
+	public String getfPassengerLastName() {
+		return fPassengerLastName;
 	}
 
-	public void setF_passenger_lastName(String f_passenger_lastName) {
-		F_passenger_lastName = f_passenger_lastName;
+	public void setfPassengerLastName(String fPassengerLastName) {
+		this.fPassengerLastName = fPassengerLastName;
 	}
 
-	public String getF_passenger_national() {
-		return F_passenger_national;
+	public String getfPassengerNational() {
+		return fPassengerNational;
 	}
 
-	public void setF_passenger_national(String f_passenger_national) {
-		F_passenger_national = f_passenger_national;
+	public void setfPassengerNational(String fPassengerNational) {
+		this.fPassengerNational = fPassengerNational;
 	}
 
-	public Date getF_passenger_birthday() {
-		return F_passenger_birthday;
+	public Date getfPassengerBirthday() {
+		return fPassengerBirthday;
 	}
 
-	public void setF_passenger_birthday(java.sql.Date f_passenger_birthday) {
-		F_passenger_birthday = f_passenger_birthday;
+	public void setfPassengerBirthday(Date fPassengerBirthday) {
+		this.fPassengerBirthday = fPassengerBirthday;
 	}
 
-	public String getF_passenger_phone() {
-		return F_passenger_phone;
+	public String getfPassengerPhone() {
+		return fPassengerPhone;
 	}
 
-	public void setF_passenger_phone(String f_passenger_phone) {
-		F_passenger_phone = f_passenger_phone;
+	public void setfPassengerPhone(String fPassengerPhone) {
+		this.fPassengerPhone = fPassengerPhone;
 	}
 
-	public Boolean getF_passenger_salutation() {
-		return F_passenger_salutation;
+	public Boolean getfPassengerSalutation() {
+		return fPassengerSalutation;
 	}
 
-	public void setF_passenger_salutation(Boolean f_passenger_salutation) {
-		F_passenger_salutation = f_passenger_salutation;
+	public void setfPassengerSalutation(Boolean fPassengerSalutation) {
+		this.fPassengerSalutation = fPassengerSalutation;
 	}
 
-	public Integer getF_adult_price() {
-		return F_adult_price;
+	public Integer getfAdultPrice() {
+		return fAdultPrice;
 	}
 
-	public void setF_adult_price(Integer f_adult_price) {
-		F_adult_price = f_adult_price;
+	public void setfAdultPrice(Integer fAdultPrice) {
+		this.fAdultPrice = fAdultPrice;
 	}
 
-	public Integer getF_child_price() {
-		return F_child_price;
+	public Integer getfChildPrice() {
+		return fChildPrice;
 	}
 
-	public void setF_child_price(Integer f_child_price) {
-		F_child_price = f_child_price;
+	public void setfChildPrice(Integer fChildPrice) {
+		this.fChildPrice = fChildPrice;
 	}
 
 	public FlightOrderBean getFlightOrderBean() {
-		return FlightOrderBean;
+		return flightOrderBean;
 	}
 
 	public void setFlightOrderBean(FlightOrderBean flightOrderBean) {
-		FlightOrderBean = flightOrderBean;
+		this.flightOrderBean = flightOrderBean;
 	}
 
 	public NationalBean getNationalBean() {
-		return NationalBean;
+		return nationalBean;
 	}
 
 	public void setNationalBean(NationalBean nationalBean) {
-		NationalBean = nationalBean;
+		this.nationalBean = nationalBean;
 	}
+
 	
 	
 }

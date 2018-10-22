@@ -16,131 +16,157 @@ import model.flight_order.FlightOrderBean;
 @Table(name="Flight_Order_Detail")
 public class FlightOrderDetailBean implements Serializable {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String F_order_id;
+	@Column(name="F_order_id")
+	private String fOrderId;
 	@Id
-	@Column(columnDefinition="char(1)")
-	private String F_bound;
-	@Column(columnDefinition="char(2)")
-	private String F_company;
-	@Column(columnDefinition="char(5)")
-	private String F_number;
-	private Time F_departure_time;
-	private Time F_arrival_time;
-	private Time F_travel_time;
-	private Boolean F_transfer;
-	@Column(columnDefinition="char(3)")
-	private String F_origin;
-	@Column(columnDefinition="char(3)")
-	private String F_destination;
-	@Column(columnDefinition="char(1)")
-	private String F_class;
+	@Column(name="F_bound")
+	private String fBound;
+	@Column(name="F_company")
+	private String fCompany;
+	@Column(name="F_number")
+	private String fNumber;
+	@Column(name="F_departure_time")
+	private Time fDepartureTime;
+	@Column(name="F_arrival_time")
+	private Time fArrivalTime;
+	@Column(name="F_travel_time")
+	private Time fTravelTime;
+	@Column(name="F_transfer")
+	private Boolean fTransfer;
+	@Column(name="F_origin")
+	private String fOrigin;
+	@Column(name="F_destination")
+	private String fDestination;
+	@Column(name="F_class")
+	private String fClass;
 	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="F_order_id")
-	private FlightOrderBean FlightOrderBean; 
+	private FlightOrderBean flightOrderBean; 
 	
 	public FlightOrderDetailBean() {}
-	
+
+	public FlightOrderDetailBean(String fOrderId, String fBound, String fCompany, String fNumber, Time fDepartureTime,
+			Time fArrivalTime, Time fTravelTime, Boolean fTransfer, String fOrigin, String fDestination, String fClass,
+			FlightOrderBean flightOrderBean) {
+		super();
+		this.fOrderId = fOrderId;
+		this.fBound = fBound;
+		this.fCompany = fCompany;
+		this.fNumber = fNumber;
+		this.fDepartureTime = fDepartureTime;
+		this.fArrivalTime = fArrivalTime;
+		this.fTravelTime = fTravelTime;
+		this.fTransfer = fTransfer;
+		this.fOrigin = fOrigin;
+		this.fDestination = fDestination;
+		this.fClass = fClass;
+		this.flightOrderBean = flightOrderBean;
+	}
+
 	@Override
 	public String toString() {
-		return "FlightOrderDetailBean [F_order_id=" + F_order_id + ", F_bound=" + F_bound + ", F_company=" + F_company
-				+ ", F_number=" + F_number + ", F_departure_time=" + F_departure_time + ", F_arrival_time="
-				+ F_arrival_time + ", F_travel_time=" + F_travel_time + ", F_transfer=" + F_transfer + ", F_origin="
-				+ F_origin + ", F_destination=" + F_destination + ", F_class=" + F_class + ", FlightOrderBean="
-				+ FlightOrderBean + "]";
+		return "FlightOrderDetailBean [fOrderId=" + fOrderId + ", fBound=" + fBound + ", fCompany=" + fCompany
+				+ ", fNumber=" + fNumber + ", fDepartureTime=" + fDepartureTime + ", fArrivalTime=" + fArrivalTime
+				+ ", fTravelTime=" + fTravelTime + ", fTransfer=" + fTransfer + ", fOrigin=" + fOrigin
+				+ ", fDestination=" + fDestination + ", fClass=" + fClass + "]";
 	}
 
-	public FlightOrderDetailBean(String f_order_id, String f_bound, String f_company, String f_number,
-			Time f_departure_time, Time f_arrival_time, Time f_travel_time, Boolean f_transfer, String f_origin,
-			String f_destination, String f_class, FlightOrderBean flightOrderBean) {
-		super();
-		F_order_id = f_order_id;
-		F_bound = f_bound;
-		F_company = f_company;
-		F_number = f_number;
-		F_departure_time = f_departure_time;
-		F_arrival_time = f_arrival_time;
-		F_travel_time = f_travel_time;
-		F_transfer = f_transfer;
-		F_origin = f_origin;
-		F_destination = f_destination;
-		F_class = f_class;
-		FlightOrderBean = flightOrderBean;
+	public String getfOrderId() {
+		return fOrderId;
 	}
 
+	public void setfOrderId(String fOrderId) {
+		this.fOrderId = fOrderId;
+	}
 
+	public String getfBound() {
+		return fBound;
+	}
+
+	public void setfBound(String fBound) {
+		this.fBound = fBound;
+	}
+
+	public String getfCompany() {
+		return fCompany;
+	}
+
+	public void setfCompany(String fCompany) {
+		this.fCompany = fCompany;
+	}
+
+	public String getfNumber() {
+		return fNumber;
+	}
+
+	public void setfNumber(String fNumber) {
+		this.fNumber = fNumber;
+	}
+
+	public Time getfDepartureTime() {
+		return fDepartureTime;
+	}
+
+	public void setfDepartureTime(Time fDepartureTime) {
+		this.fDepartureTime = fDepartureTime;
+	}
+
+	public Time getfArrivalTime() {
+		return fArrivalTime;
+	}
+
+	public void setfArrivalTime(Time fArrivalTime) {
+		this.fArrivalTime = fArrivalTime;
+	}
+
+	public Time getfTravelTime() {
+		return fTravelTime;
+	}
+
+	public void setfTravelTime(Time fTravelTime) {
+		this.fTravelTime = fTravelTime;
+	}
+
+	public Boolean getfTransfer() {
+		return fTransfer;
+	}
+
+	public void setfTransfer(Boolean fTransfer) {
+		this.fTransfer = fTransfer;
+	}
+
+	public String getfOrigin() {
+		return fOrigin;
+	}
+
+	public void setfOrigin(String fOrigin) {
+		this.fOrigin = fOrigin;
+	}
+
+	public String getfDestination() {
+		return fDestination;
+	}
+
+	public void setfDestination(String fDestination) {
+		this.fDestination = fDestination;
+	}
+
+	public String getfClass() {
+		return fClass;
+	}
+
+	public void setfClass(String fClass) {
+		this.fClass = fClass;
+	}
 
 	public FlightOrderBean getFlightOrderBean() {
-		return FlightOrderBean;
+		return flightOrderBean;
 	}
+
 	public void setFlightOrderBean(FlightOrderBean flightOrderBean) {
-		FlightOrderBean = flightOrderBean;
+		this.flightOrderBean = flightOrderBean;
 	}
-	public String getF_order_id() {
-		return F_order_id;
-	}
-	public void setF_order_id(String f_order_id) {
-		F_order_id = f_order_id;
-	}
-	public String getF_bound() {
-		return F_bound;
-	}
-	public void setF_bound(String f_bound) {
-		F_bound = f_bound;
-	}
-	public String getF_company() {
-		return F_company;
-	}
-	public void setF_company(String f_company) {
-		F_company = f_company;
-	}
-	public String getF_number() {
-		return F_number;
-	}
-	public void setF_number(String f_number) {
-		F_number = f_number;
-	}
-	public Time getF_departure_time() {
-		return F_departure_time;
-	}
-	public void setF_departure_time(Time f_departure_time) {
-		F_departure_time = f_departure_time;
-	}
-	public Time getF_arrival_time() {
-		return F_arrival_time;
-	}
-	public void setF_arrival_time(Time f_arrival_time) {
-		F_arrival_time = f_arrival_time;
-	}
-	public Time getF_travel_time() {
-		return F_travel_time;
-	}
-	public void setF_travel_time(Time f_travel_time) {
-		F_travel_time = f_travel_time;
-	}
-	public Boolean getF_transfer() {
-		return F_transfer;
-	}
-	public void setF_transfer(Boolean f_transfer) {
-		F_transfer = f_transfer;
-	}
-	public String getF_origin() {
-		return F_origin;
-	}
-	public void setF_origin(String f_origin) {
-		F_origin = f_origin;
-	}
-	public String getF_destination() {
-		return F_destination;
-	}
-	public void setF_destination(String f_destination) {
-		F_destination = f_destination;
-	}
-	public String getF_class() {
-		return F_class;
-	}
-	public void setF_class(String f_class) {
-		F_class = f_class;
-	}
+
+	
 
 }

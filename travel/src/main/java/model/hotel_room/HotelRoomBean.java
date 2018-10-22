@@ -14,99 +14,141 @@ import model.hotel.HotelBean;
 @Table(name="Hotel_room")
 public class HotelRoomBean {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Room_id;
-	@Column(columnDefinition="char(8)")
-	private String Hotel_id;
-	@Column(columnDefinition="nvarchar(100)")
-	private String Room_name;
-	@Column(columnDefinition="nvarchar(100)")
-	private String Room_bed;
-	private Integer Room_accommodate;
-	@Column(columnDefinition="varchar(max)")
-	private String Room_img;
-	@Column(columnDefinition="nvarchar(max)")
-	private String Room_suite;
-	private Integer Room_amount_total;
+	@Column(name="room_id")
+	private String roomId;
+	@Column(name="hotel_id")
+	private String hotelId;
+	@Column(name="room_name")
+	private String roomName;
+	@Column(name="room_bed")
+	private String roomBed;
+	@Column(name="room_accommodate")
+	private Integer roomAccommodate;
+	@Column(name="room_img")
+	private String roomImg;
+	@Column(name="room_suite")
+	private String roomSuite;
+	@Column(name="room_amount_total")
+	private Integer roomAmountTotal;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Hotel_id")
-	private HotelBean HotelBean;
+	@JoinColumn(name="hotel_id")
+	private HotelBean hotelBean;
 	
 	
 	public HotelRoomBean() {}
-	public HotelRoomBean(String room_id, String hotel_id, String room_name, String room_bed, Integer room_accommodate,
-			String room_img, String room_suite, Integer room_amount_total, HotelBean hotelBean) {
+
+
+	public HotelRoomBean(String roomId, String hotelId, String roomName, String roomBed, Integer roomAccommodate,
+			String roomImg, String roomSuite, Integer roomAmountTotal, HotelBean hotelBean) {
 		super();
-		Room_id = room_id;
-		Hotel_id = hotel_id;
-		Room_name = room_name;
-		Room_bed = room_bed;
-		Room_accommodate = room_accommodate;
-		Room_img = room_img;
-		Room_suite = room_suite;
-		Room_amount_total = room_amount_total;
-		HotelBean = hotelBean;
+		this.roomId = roomId;
+		this.hotelId = hotelId;
+		this.roomName = roomName;
+		this.roomBed = roomBed;
+		this.roomAccommodate = roomAccommodate;
+		this.roomImg = roomImg;
+		this.roomSuite = roomSuite;
+		this.roomAmountTotal = roomAmountTotal;
+		this.hotelBean = hotelBean;
 	}
+
+
 	@Override
 	public String toString() {
-		return "HotelRoomBean [Room_id=" + Room_id + ", Hotel_id=" + Hotel_id + ", Room_name=" + Room_name
-				+ ", Room_bed=" + Room_bed + ", Room_accommodate=" + Room_accommodate + ", Room_img=" + Room_img
-				+ ", Room_suite=" + Room_suite + ", Room_amount_total=" + Room_amount_total + ", HotelBean=" + HotelBean
-				+ "]";
+		return "HotelRoomBean [roomId=" + roomId + ", hotelId=" + hotelId + ", roomName=" + roomName + ", roomBed="
+				+ roomBed + ", roomAccommodate=" + roomAccommodate + ", roomImg=" + roomImg + ", roomSuite=" + roomSuite
+				+ ", roomAmountTotal=" + roomAmountTotal + "]";
 	}
-	public String getRoom_id() {
-		return Room_id;
+
+
+	public String getRoomId() {
+		return roomId;
 	}
-	public void setRoom_id(String room_id) {
-		Room_id = room_id;
+
+
+	public void setRoomId(String roomId) {
+		this.roomId = roomId;
 	}
-	public String getHotel_id() {
-		return Hotel_id;
+
+
+	public String getHotelId() {
+		return hotelId;
 	}
-	public void setHotel_id(String hotel_id) {
-		Hotel_id = hotel_id;
+
+
+	public void setHotelId(String hotelId) {
+		this.hotelId = hotelId;
 	}
-	public String getRoom_name() {
-		return Room_name;
+
+
+	public String getRoomName() {
+		return roomName;
 	}
-	public void setRoom_name(String room_name) {
-		Room_name = room_name;
+
+
+	public void setRoomName(String roomName) {
+		this.roomName = roomName;
 	}
-	public String getRoom_bed() {
-		return Room_bed;
+
+
+	public String getRoomBed() {
+		return roomBed;
 	}
-	public void setRoom_bed(String room_bed) {
-		Room_bed = room_bed;
+
+
+	public void setRoomBed(String roomBed) {
+		this.roomBed = roomBed;
 	}
-	public Integer getRoom_accommodate() {
-		return Room_accommodate;
+
+
+	public Integer getRoomAccommodate() {
+		return roomAccommodate;
 	}
-	public void setRoom_accommodate(Integer room_accommodate) {
-		Room_accommodate = room_accommodate;
+
+
+	public void setRoomAccommodate(Integer roomAccommodate) {
+		this.roomAccommodate = roomAccommodate;
 	}
-	public String getRoom_img() {
-		return Room_img;
+
+
+	public String getRoomImg() {
+		return roomImg;
 	}
-	public void setRoom_img(String room_img) {
-		Room_img = room_img;
+
+
+	public void setRoomImg(String roomImg) {
+		this.roomImg = roomImg;
 	}
-	public String getRoom_suite() {
-		return Room_suite;
+
+
+	public String getRoomSuite() {
+		return roomSuite;
 	}
-	public void setRoom_suite(String room_suite) {
-		Room_suite = room_suite;
+
+
+	public void setRoomSuite(String roomSuite) {
+		this.roomSuite = roomSuite;
 	}
-	public Integer getRoom_amount_total() {
-		return Room_amount_total;
+
+
+	public Integer getRoomAmountTotal() {
+		return roomAmountTotal;
 	}
-	public void setRoom_amount_total(Integer room_amount_total) {
-		Room_amount_total = room_amount_total;
+
+
+	public void setRoomAmountTotal(Integer roomAmountTotal) {
+		this.roomAmountTotal = roomAmountTotal;
 	}
+
+
 	public HotelBean getHotelBean() {
-		return HotelBean;
+		return hotelBean;
 	}
+
+
 	public void setHotelBean(HotelBean hotelBean) {
-		HotelBean = hotelBean;
+		this.hotelBean = hotelBean;
 	}
+	
 	
 }

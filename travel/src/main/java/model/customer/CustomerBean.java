@@ -13,117 +13,120 @@ import javax.persistence.Table;
 public class CustomerBean {
 	
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String Customer_id;
-	@Column(columnDefinition="varchar(50)")
-	private String Customer_lastName;
-	@Column(columnDefinition="varchar(50)")
-	private String Customer_firstName;
-	@Column(columnDefinition="varchar(20)")
-	private String Customer_password;	
-	@Column(columnDefinition="varchar(50)")
-	private String Customer_phone;
-	private Boolean Customer_gender;
-	private Date Customer_birthday;
-	@Column(columnDefinition="varchar(100)")
-	private String Customer_email;
-	private Date Customer_date;
-	
-	@Override
-	public String toString() {
-		return "CustomerBean [Customer_id=" + Customer_id + ", Customer_lastName=" + Customer_lastName
-				+ ", Customer_firstName=" + Customer_firstName + ", Customer_password=" + Customer_password
-				+ ", Customer_phone=" + Customer_phone + ", Customer_gender=" + Customer_gender + ", Customer_birthday="
-				+ Customer_birthday + ", Customer_email=" + Customer_email + ", Customer_date=" + Customer_date + "]";
-	}
+	@Column(name="customer_id")
+	private String customerId;
+	@Column(name="customer_lastName")
+	private String customerLastName;
+	@Column(name="customer_firstName")
+	private String customerFirstName;
+	@Column(name="customer_password")
+	private String customerPassword;	
+	@Column(name="customer_phone")
+	private String customerPhone;
+	@Column(name="customer_gender")
+	private Boolean customerGender;
+	@Column(name="customer_birthday")
+	private Date customerBirthday;
+	@Column(name="customer_email")
+	private String customerEmail;
+	@Column(name="customer_date")
+	private Date customerDate;
 
 	public CustomerBean() {}
 
-	public CustomerBean(String customer_id, String customer_lastName, String customer_firstName,
-			String customer_password, String customer_phone, Boolean customer_gender, Date customer_birthday,
-			String customer_email, Date customer_date) {
+	public CustomerBean(String customerId, String customerLastName, String customerFirstName, String customerPassword,
+			String customerPhone, Boolean customerGender, Date customerBirthday, String customerEmail,
+			Date customerDate) {
 		super();
-		Customer_id = customer_id;
-		Customer_lastName = customer_lastName;
-		Customer_firstName = customer_firstName;
-		Customer_password = customer_password;
-		Customer_phone = customer_phone;
-		Customer_gender = customer_gender;
-		Customer_birthday = customer_birthday;
-		Customer_email = customer_email;
-		Customer_date = customer_date;
+		this.customerId = customerId;
+		this.customerLastName = customerLastName;
+		this.customerFirstName = customerFirstName;
+		this.customerPassword = customerPassword;
+		this.customerPhone = customerPhone;
+		this.customerGender = customerGender;
+		this.customerBirthday = customerBirthday;
+		this.customerEmail = customerEmail;
+		this.customerDate = customerDate;
 	}
 
-	public String getCustomer_id() {
-		return Customer_id;
+	@Override
+	public String toString() {
+		return "CustomerBean [customerId=" + customerId + ", customerLastName=" + customerLastName
+				+ ", customerFirstName=" + customerFirstName + ", customerPassword=" + customerPassword
+				+ ", customerPhone=" + customerPhone + ", customerGender=" + customerGender + ", customerBirthday="
+				+ customerBirthday + ", customerEmail=" + customerEmail + ", customerDate=" + customerDate + "]";
 	}
 
-	public void setCustomer_id(String customer_id) {
-		Customer_id = customer_id;
+	public String getCustomerId() {
+		return customerId;
 	}
 
-	public String getCustomer_lastName() {
-		return Customer_lastName;
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 
-	public void setCustomer_lastName(String customer_lastName) {
-		Customer_lastName = customer_lastName;
+	public String getCustomerLastName() {
+		return customerLastName;
 	}
 
-	public String getCustomer_firstName() {
-		return Customer_firstName;
+	public void setCustomerLastName(String customerLastName) {
+		this.customerLastName = customerLastName;
 	}
 
-	public void setCustomer_firstName(String customer_firstName) {
-		Customer_firstName = customer_firstName;
+	public String getCustomerFirstName() {
+		return customerFirstName;
 	}
 
-	public String getCustomer_password() {
-		return Customer_password;
+	public void setCustomerFirstName(String customerFirstName) {
+		this.customerFirstName = customerFirstName;
 	}
 
-	public void setCustomer_password(String customer_password) {
-		Customer_password = customer_password;
+	public String getCustomerPassword() {
+		return customerPassword;
 	}
 
-	public String getCustomer_phone() {
-		return Customer_phone;
+	public void setCustomerPassword(String customerPassword) {
+		this.customerPassword = customerPassword;
 	}
 
-	public void setCustomer_phone(String customer_phone) {
-		Customer_phone = customer_phone;
+	public String getCustomerPhone() {
+		return customerPhone;
 	}
 
-	public Boolean getCustomer_gender() {
-		return Customer_gender;
+	public void setCustomerPhone(String customerPhone) {
+		this.customerPhone = customerPhone;
 	}
 
-	public void setCustomer_gender(Boolean customer_gender) {
-		Customer_gender = customer_gender;
+	public Boolean getCustomerGender() {
+		return customerGender;
 	}
 
-	public Date getCustomer_birthday() {
-		return Customer_birthday;
+	public void setCustomerGender(Boolean customerGender) {
+		this.customerGender = customerGender;
 	}
 
-	public void setCustomer_birthday(Date customer_birthday) {
-		Customer_birthday = customer_birthday;
+	public Date getCustomerBirthday() {
+		return customerBirthday;
 	}
 
-	public String getCustomer_email() {
-		return Customer_email;
+	public void setCustomerBirthday(Date customerBirthday) {
+		this.customerBirthday = customerBirthday;
 	}
 
-	public void setCustomer_email(String customer_email) {
-		Customer_email = customer_email;
+	public String getCustomerEmail() {
+		return customerEmail;
 	}
 
-	public Date getCustomer_date() {
-		return Customer_date;
+	public void setCustomerEmail(String customerEmail) {
+		this.customerEmail = customerEmail;
 	}
 
-	public void setCustomer_date(Date customer_date) {
-		Customer_date = customer_date;
+	public Date getCustomerDate() {
+		return customerDate;
+	}
+
+	public void setCustomerDate(Date customerDate) {
+		this.customerDate = customerDate;
 	}
 
 }

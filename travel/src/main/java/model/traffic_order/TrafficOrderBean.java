@@ -3,12 +3,10 @@ package model.traffic_order;
 import java.util.Date;
 import java.sql.Time;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import model.customer.CustomerBean;
@@ -16,171 +14,166 @@ import model.customer.CustomerBean;
 @Table(name="Traffic_order")
 public class TrafficOrderBean {
 	@Id
-	@Column(columnDefinition="char(10)")
-	private String R_order_id;
-	@Column(columnDefinition="char(10)")
-	private String Customer_id;
-	@Column(columnDefinition="nvarchar(50)")
-	private String R_order_firstName;
-	@Column(columnDefinition="nvarchar(50)")
-	private String R_order_lastName;
-	@Column(columnDefinition="char(2)")
-	private String R_order_national;
-	private Integer R_order_total;
-	private Integer R_order_amount;
-	@Column(columnDefinition="varchar(100)")
-	private String R_order_email;
-	@Column(columnDefinition="char(4)")
-	private String R_order_trainNo;
-	@Column(columnDefinition="nvarchar(10)")
-	private String R_order_type;
-	private Date R_order_date;
-	private Time R_order_startT;
-	private Time R_order_endT;
-	@Column(columnDefinition="char(4)")
-	private String R_order_stratP;
-	@Column(columnDefinition="char(4)")
-	private String R_order_endP;
-	private Time R_order_travelT;
-	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Customer_id")
-	private CustomerBean CustomerBean;
+	@Column(name="R_order_id")
+	private String rOrderId;
+	@Column(name="customer_id")
+	private String customerId;
+	@Column(name="R_order_firstName")
+	private String rOrderFirstName;
+	@Column(name="R_order_lastName")
+	private String rOrderLastName;
+	@Column(name="R_order_national")
+	private String rOrderNational;
+	@Column(name="R_order_total")
+	private Integer rOrderTotal;
+	@Column(name="R_order_amount")
+	private Integer rOrderAmount;
+	@Column(name="R_order_email")
+	private String rOrderEmail;
+	@Column(name="R_order_trainNo")
+	private String rOrderTrainNo;
+	@Column(name="R_order_type")
+	private String rOrderType;
+	@Column(name="R_order_date")
+	private Date rOrderDate;
+	@Column(name="R_order_startT")
+	private Time rOrderStartT;
+	@Column(name="R_order_endT")
+	private Time rOrderEndT;
+	@Column(name="R_order_stratP")
+	private String rOrderStratP;
+	@Column(name="R_order_endP")
+	private String rOrderEndP;
+	@Column(name="R_order_travelT")
+	private Time rOrderTravelT;
 	public TrafficOrderBean() { }
-	public TrafficOrderBean(String r_order_id, String customer_id, String r_order_firstName, String r_order_lastName,
-			String r_order_national, Integer r_order_total, Integer r_order_amount, String r_order_email,
-			String r_order_trainNo, String r_order_type, Date r_order_date, Time r_order_startT, Time r_order_endT,
-			String r_order_stratP, String r_order_endP, Time r_order_travelT,
-			CustomerBean customerBean) {
+	public TrafficOrderBean(String rOrderId, String customerId, String rOrderFirstName, String rOrderLastName,
+			String rOrderNational, Integer rOrderTotal, Integer rOrderAmount, String rOrderEmail, String rOrderTrainNo,
+			String rOrderType, Date rOrderDate, Time rOrderStartT, Time rOrderEndT, String rOrderStratP,
+			String rOrderEndP, Time rOrderTravelT) {
 		super();
-		R_order_id = r_order_id;
-		Customer_id = customer_id;
-		R_order_firstName = r_order_firstName;
-		R_order_lastName = r_order_lastName;
-		R_order_national = r_order_national;
-		R_order_total = r_order_total;
-		R_order_amount = r_order_amount;
-		R_order_email = r_order_email;
-		R_order_trainNo = r_order_trainNo;
-		R_order_type = r_order_type;
-		R_order_date = r_order_date;
-		R_order_startT = r_order_startT;
-		R_order_endT = r_order_endT;
-		R_order_stratP = r_order_stratP;
-		R_order_endP = r_order_endP;
-		R_order_travelT = r_order_travelT;
-		CustomerBean = customerBean;
+		this.rOrderId = rOrderId;
+		this.customerId = customerId;
+		this.rOrderFirstName = rOrderFirstName;
+		this.rOrderLastName = rOrderLastName;
+		this.rOrderNational = rOrderNational;
+		this.rOrderTotal = rOrderTotal;
+		this.rOrderAmount = rOrderAmount;
+		this.rOrderEmail = rOrderEmail;
+		this.rOrderTrainNo = rOrderTrainNo;
+		this.rOrderType = rOrderType;
+		this.rOrderDate = rOrderDate;
+		this.rOrderStartT = rOrderStartT;
+		this.rOrderEndT = rOrderEndT;
+		this.rOrderStratP = rOrderStratP;
+		this.rOrderEndP = rOrderEndP;
+		this.rOrderTravelT = rOrderTravelT;
 	}
 	@Override
 	public String toString() {
-		return "TrafficOrderBean [R_order_id=" + R_order_id + ", Customer_id=" + Customer_id + ", R_order_firstName="
-				+ R_order_firstName + ", R_order_lastName=" + R_order_lastName + ", R_order_national="
-				+ R_order_national + ", R_order_total=" + R_order_total + ", R_order_amount=" + R_order_amount
-				+ ", R_order_email=" + R_order_email + ", R_order_trainNo=" + R_order_trainNo + ", R_order_type="
-				+ R_order_type + ", R_order_date=" + R_order_date + ", R_order_startT=" + R_order_startT
-				+ ", R_order_endT=" + R_order_endT + ", R_order_stratP=" + R_order_stratP + ", R_order_endP="
-				+ R_order_endP + ", R_order_travelT=" + R_order_travelT + ", CustomerBean=" + CustomerBean + "]";
+		return "TrafficOrderBean [rOrderId=" + rOrderId + ", customerId=" + customerId + ", rOrderFirstName="
+				+ rOrderFirstName + ", rOrderLastName=" + rOrderLastName + ", rOrderNational=" + rOrderNational
+				+ ", rOrderTotal=" + rOrderTotal + ", rOrderAmount=" + rOrderAmount + ", rOrderEmail=" + rOrderEmail
+				+ ", rOrderTrainNo=" + rOrderTrainNo + ", rOrderType=" + rOrderType + ", rOrderDate=" + rOrderDate
+				+ ", rOrderStartT=" + rOrderStartT + ", rOrderEndT=" + rOrderEndT + ", rOrderStratP=" + rOrderStratP
+				+ ", rOrderEndP=" + rOrderEndP + ", rOrderTravelT=" + rOrderTravelT + "]";
 	}
-	public String getR_order_id() {
-		return R_order_id;
+	public String getrOrderId() {
+		return rOrderId;
 	}
-	public void setR_order_id(String r_order_id) {
-		R_order_id = r_order_id;
+	public void setrOrderId(String rOrderId) {
+		this.rOrderId = rOrderId;
 	}
-	public String getCustomer_id() {
-		return Customer_id;
+	public String getCustomerId() {
+		return customerId;
 	}
-	public void setCustomer_id(String customer_id) {
-		Customer_id = customer_id;
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
-	public String getR_order_firstName() {
-		return R_order_firstName;
+	public String getrOrderFirstName() {
+		return rOrderFirstName;
 	}
-	public void setR_order_firstName(String r_order_firstName) {
-		R_order_firstName = r_order_firstName;
+	public void setrOrderFirstName(String rOrderFirstName) {
+		this.rOrderFirstName = rOrderFirstName;
 	}
-	public String getR_order_lastName() {
-		return R_order_lastName;
+	public String getrOrderLastName() {
+		return rOrderLastName;
 	}
-	public void setR_order_lastName(String r_order_lastName) {
-		R_order_lastName = r_order_lastName;
+	public void setrOrderLastName(String rOrderLastName) {
+		this.rOrderLastName = rOrderLastName;
 	}
-	public String getR_order_national() {
-		return R_order_national;
+	public String getrOrderNational() {
+		return rOrderNational;
 	}
-	public void setR_order_national(String r_order_national) {
-		R_order_national = r_order_national;
+	public void setrOrderNational(String rOrderNational) {
+		this.rOrderNational = rOrderNational;
 	}
-	public Integer getR_order_total() {
-		return R_order_total;
+	public Integer getrOrderTotal() {
+		return rOrderTotal;
 	}
-	public void setR_order_total(Integer r_order_total) {
-		R_order_total = r_order_total;
+	public void setrOrderTotal(Integer rOrderTotal) {
+		this.rOrderTotal = rOrderTotal;
 	}
-	public Integer getR_order_amount() {
-		return R_order_amount;
+	public Integer getrOrderAmount() {
+		return rOrderAmount;
 	}
-	public void setR_order_amount(Integer r_order_amount) {
-		R_order_amount = r_order_amount;
+	public void setrOrderAmount(Integer rOrderAmount) {
+		this.rOrderAmount = rOrderAmount;
 	}
-	public String getR_order_email() {
-		return R_order_email;
+	public String getrOrderEmail() {
+		return rOrderEmail;
 	}
-	public void setR_order_email(String r_order_email) {
-		R_order_email = r_order_email;
+	public void setrOrderEmail(String rOrderEmail) {
+		this.rOrderEmail = rOrderEmail;
 	}
-	public String getR_order_trainNo() {
-		return R_order_trainNo;
+	public String getrOrderTrainNo() {
+		return rOrderTrainNo;
 	}
-	public void setR_order_trainNo(String r_order_trainNo) {
-		R_order_trainNo = r_order_trainNo;
+	public void setrOrderTrainNo(String rOrderTrainNo) {
+		this.rOrderTrainNo = rOrderTrainNo;
 	}
-	public String getR_order_type() {
-		return R_order_type;
+	public String getrOrderType() {
+		return rOrderType;
 	}
-	public void setR_order_type(String r_order_type) {
-		R_order_type = r_order_type;
+	public void setrOrderType(String rOrderType) {
+		this.rOrderType = rOrderType;
 	}
-	public Date getR_order_date() {
-		return R_order_date;
+	public Date getrOrderDate() {
+		return rOrderDate;
 	}
-	public void setR_order_date(Date r_order_date) {
-		R_order_date = r_order_date;
+	public void setrOrderDate(Date rOrderDate) {
+		this.rOrderDate = rOrderDate;
 	}
-	public Time getR_order_startT() {
-		return R_order_startT;
+	public Time getrOrderStartT() {
+		return rOrderStartT;
 	}
-	public void setR_order_startT(Time r_order_startT) {
-		R_order_startT = r_order_startT;
+	public void setrOrderStartT(Time rOrderStartT) {
+		this.rOrderStartT = rOrderStartT;
 	}
-	public Time getR_order_endT() {
-		return R_order_endT;
+	public Time getrOrderEndT() {
+		return rOrderEndT;
 	}
-	public void setR_order_endT(Time r_order_endT) {
-		R_order_endT = r_order_endT;
+	public void setrOrderEndT(Time rOrderEndT) {
+		this.rOrderEndT = rOrderEndT;
 	}
-	public String getR_order_stratP() {
-		return R_order_stratP;
+	public String getrOrderStratP() {
+		return rOrderStratP;
 	}
-	public void setR_order_stratP(String r_order_stratP) {
-		R_order_stratP = r_order_stratP;
+	public void setrOrderStratP(String rOrderStratP) {
+		this.rOrderStratP = rOrderStratP;
 	}
-	public String getR_order_endP() {
-		return R_order_endP;
+	public String getrOrderEndP() {
+		return rOrderEndP;
 	}
-	public void setR_order_endP(String r_order_endP) {
-		R_order_endP = r_order_endP;
+	public void setrOrderEndP(String rOrderEndP) {
+		this.rOrderEndP = rOrderEndP;
 	}
-	public Time getR_order_travelT() {
-		return R_order_travelT;
+	public Time getrOrderTravelT() {
+		return rOrderTravelT;
 	}
-	public void setR_order_travelT(Time r_order_travelT) {
-		R_order_travelT = r_order_travelT;
+	public void setrOrderTravelT(Time rOrderTravelT) {
+		this.rOrderTravelT = rOrderTravelT;
 	}
-	public CustomerBean getCustomerBean() {
-		return CustomerBean;
-	}
-	public void setCustomerBean(CustomerBean customerBean) {
-		CustomerBean = customerBean;
-	}
+	
 	
 }

@@ -9,41 +9,51 @@ import javax.persistence.Table;
 @Table(name="National")
 public class NationalBean {
 	@Id
-	@Column(columnDefinition="char(2)")
-	private String National_id;
-	@Column(columnDefinition="varchar(50)")
-	private String National_name_e;
-	@Column(columnDefinition="nvarchar(50)")
-	private String National_name;
-	public NationalBean(String national_id, String national_name_e, String national_name) {
-		super();
-		National_id = national_id;
-		National_name_e = national_name_e;
-		National_name = national_name;
-	}
+	@Column(name="national_id")
+	private String nationalId;
+	@Column(name="national_name_e")
+	private String nationalNameE;
+	@Column(name="national_name")
+	private String nationalName;
+
 	public NationalBean() { }
+
+	public NationalBean(String nationalId, String nationalNameE, String nationalName) {
+		super();
+		this.nationalId = nationalId;
+		this.nationalNameE = nationalNameE;
+		this.nationalName = nationalName;
+	}
+
 	@Override
 	public String toString() {
-		return "NationalBean [National_id=" + National_id + ", National_name_e=" + National_name_e + ", National_name="
-				+ National_name + "]";
+		return "NationalBean [nationalId=" + nationalId + ", nationalNameE=" + nationalNameE + ", nationalName="
+				+ nationalName + "]";
 	}
-	public String getNational_id() {
-		return National_id;
+
+	public String getNationalId() {
+		return nationalId;
 	}
-	public void setNational_id(String national_id) {
-		National_id = national_id;
+
+	public void setNationalId(String nationalId) {
+		this.nationalId = nationalId;
 	}
-	public String getNational_name_e() {
-		return National_name_e;
+
+	public String getNationalNameE() {
+		return nationalNameE;
 	}
-	public void setNational_name_e(String national_name_e) {
-		National_name_e = national_name_e;
+
+	public void setNationalNameE(String nationalNameE) {
+		this.nationalNameE = nationalNameE;
 	}
-	public String getNational_name() {
-		return National_name;
+
+	public String getNationalName() {
+		return nationalName;
 	}
-	public void setNational_name(String national_name) {
-		National_name = national_name;
+
+	public void setNationalName(String nationalName) {
+		this.nationalName = nationalName;
 	}
+	
 	
 }
