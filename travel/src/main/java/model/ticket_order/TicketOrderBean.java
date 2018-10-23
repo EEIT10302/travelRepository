@@ -8,6 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import java.util.Date;
 
 import model.customer.CustomerBean;
 import model.sight.SightBean;
@@ -32,6 +33,10 @@ public class TicketOrderBean {
 	private String tOrderNational;
 	@Column(name="T_order_email")
 	private String tOrderEmail;
+	@Column(name="T_order_finalDate")
+	private Date tOrderFinalDate;
+	@Column(name="T_order_date")
+	private Date tOrderDate;
 	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="customer_id")
 	private CustomerBean customerBean;
@@ -40,8 +45,8 @@ public class TicketOrderBean {
 	private SightBean sightBean;
 	public TicketOrderBean() { }
 	public TicketOrderBean(String tOrderId, String customerId, String sightId, String tOrderName, Integer tOrderTotal,
-			Integer tOrderAmount, String tOrderNational, String tOrderEmail, CustomerBean customerBean,
-			SightBean sightBean) {
+			Integer tOrderAmount, String tOrderNational, String tOrderEmail, Date tOrderFinalDate, Date tOrderDate,
+			CustomerBean customerBean, SightBean sightBean) {
 		super();
 		this.tOrderId = tOrderId;
 		this.customerId = customerId;
@@ -51,6 +56,8 @@ public class TicketOrderBean {
 		this.tOrderAmount = tOrderAmount;
 		this.tOrderNational = tOrderNational;
 		this.tOrderEmail = tOrderEmail;
+		this.tOrderFinalDate = tOrderFinalDate;
+		this.tOrderDate = tOrderDate;
 		this.customerBean = customerBean;
 		this.sightBean = sightBean;
 	}
@@ -58,7 +65,8 @@ public class TicketOrderBean {
 	public String toString() {
 		return "TicketOrderBean [tOrderId=" + tOrderId + ", customerId=" + customerId + ", sightId=" + sightId
 				+ ", tOrderName=" + tOrderName + ", tOrderTotal=" + tOrderTotal + ", tOrderAmount=" + tOrderAmount
-				+ ", tOrderNational=" + tOrderNational + ", tOrderEmail=" + tOrderEmail + "]";
+				+ ", tOrderNational=" + tOrderNational + ", tOrderEmail=" + tOrderEmail + ", tOrderFinalDate="
+				+ tOrderFinalDate + ", tOrderDate=" + tOrderDate + "]";
 	}
 	public String gettOrderId() {
 		return tOrderId;
@@ -108,6 +116,18 @@ public class TicketOrderBean {
 	public void settOrderEmail(String tOrderEmail) {
 		this.tOrderEmail = tOrderEmail;
 	}
+	public Date gettOrderFinalDate() {
+		return tOrderFinalDate;
+	}
+	public void settOrderFinalDate(Date tOrderFinalDate) {
+		this.tOrderFinalDate = tOrderFinalDate;
+	}
+	public Date gettOrderDate() {
+		return tOrderDate;
+	}
+	public void settOrderDate(Date tOrderDate) {
+		this.tOrderDate = tOrderDate;
+	}
 	public CustomerBean getCustomerBean() {
 		return customerBean;
 	}
@@ -120,6 +140,5 @@ public class TicketOrderBean {
 	public void setSightBean(SightBean sightBean) {
 		this.sightBean = sightBean;
 	}
-	
 	
 }

@@ -46,6 +46,8 @@ public class SightBean {
 	private Boolean sightTicket;
 	@Column(name="sight_price")
 	private Integer sightPrice;
+	@Column(name="sight_score_times")
+	private Integer sightScoreTimes;
 	@OneToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="sight_type_id")
 	private SightTypeBean sightTypeBean;
@@ -55,7 +57,7 @@ public class SightBean {
 	public SightBean(String sightId, String sightType, String sightTypeId, String sightName, String sightPhone,
 			String sightAddress, String sightArea, String sightUrl, String sightDescription, String sightImg,
 			String sightBussinessHours, Time sightEstimatedTime, Double sightScoreAvg, Boolean sightTicket,
-			Integer sightPrice, SightTypeBean sightTypeBean) {
+			Integer sightPrice, Integer sightScoreTimes, SightTypeBean sightTypeBean) {
 		super();
 		this.sightId = sightId;
 		this.sightType = sightType;
@@ -72,6 +74,7 @@ public class SightBean {
 		this.sightScoreAvg = sightScoreAvg;
 		this.sightTicket = sightTicket;
 		this.sightPrice = sightPrice;
+		this.sightScoreTimes = sightScoreTimes;
 		this.sightTypeBean = sightTypeBean;
 	}
 
@@ -82,7 +85,7 @@ public class SightBean {
 				+ ", sightArea=" + sightArea + ", sightUrl=" + sightUrl + ", sightDescription=" + sightDescription
 				+ ", sightImg=" + sightImg + ", sightBussinessHours=" + sightBussinessHours + ", sightEstimatedTime="
 				+ sightEstimatedTime + ", sightScoreAvg=" + sightScoreAvg + ", sightTicket=" + sightTicket
-				+ ", sightPrice=" + sightPrice + "]";
+				+ ", sightPrice=" + sightPrice + ", sightScoreTimes=" + sightScoreTimes + "]";
 	}
 
 	public String getSightId() {
@@ -205,6 +208,14 @@ public class SightBean {
 		this.sightPrice = sightPrice;
 	}
 
+	public Integer getSightScoreTimes() {
+		return sightScoreTimes;
+	}
+
+	public void setSightScoreTimes(Integer sightScoreTimes) {
+		this.sightScoreTimes = sightScoreTimes;
+	}
+
 	public SightTypeBean getSightTypeBean() {
 		return sightTypeBean;
 	}
@@ -212,7 +223,5 @@ public class SightBean {
 	public void setSightTypeBean(SightTypeBean sightTypeBean) {
 		this.sightTypeBean = sightTypeBean;
 	}
-
-	
 	
 }

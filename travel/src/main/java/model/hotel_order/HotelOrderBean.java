@@ -58,6 +58,8 @@ public class HotelOrderBean{
 	private Integer hScore;
 	@Column(name="H_message")
 	private String hMessage;
+	@Column(name="H_order_date")
+	private Date hOrderDate;
 	
 	@OneToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="H_order_national")
@@ -71,8 +73,8 @@ public class HotelOrderBean{
 	public HotelOrderBean(String hOrderId, String customerId, String hotelId, String roomId, String hOrderNational,
 			String hOrderFirstName, String hOrderLastName, String hOrderPhone, String hOrderEmail, Date hOrderCheckIn,
 			Date hOrderCheckOut, Integer hOrderTotal, String hStayFirstName, String hStayLastName, String hStayPhone,
-			String hStayEmail, String hStayNational, Integer hScore, String hMessage, NationalBean nationalBean,
-			HotelRoomBean hotelRoomBean) {
+			String hStayEmail, String hStayNational, Integer hScore, String hMessage, Date hOrderDate,
+			NationalBean nationalBean, HotelRoomBean hotelRoomBean) {
 		super();
 		this.hOrderId = hOrderId;
 		this.customerId = customerId;
@@ -93,6 +95,7 @@ public class HotelOrderBean{
 		this.hStayNational = hStayNational;
 		this.hScore = hScore;
 		this.hMessage = hMessage;
+		this.hOrderDate = hOrderDate;
 		this.nationalBean = nationalBean;
 		this.hotelRoomBean = hotelRoomBean;
 	}
@@ -105,7 +108,7 @@ public class HotelOrderBean{
 				+ ", hOrderCheckIn=" + hOrderCheckIn + ", hOrderCheckOut=" + hOrderCheckOut + ", hOrderTotal="
 				+ hOrderTotal + ", hStayFirstName=" + hStayFirstName + ", hStayLastName=" + hStayLastName
 				+ ", hStayPhone=" + hStayPhone + ", hStayEmail=" + hStayEmail + ", hStayNational=" + hStayNational
-				+ ", hScore=" + hScore + ", hMessage=" + hMessage + "]";
+				+ ", hScore=" + hScore + ", hMessage=" + hMessage + ", hOrderDate=" + hOrderDate + "]";
 	}
 
 	public String gethOrderId() {
@@ -260,6 +263,14 @@ public class HotelOrderBean{
 		this.hMessage = hMessage;
 	}
 
+	public Date gethOrderDate() {
+		return hOrderDate;
+	}
+
+	public void sethOrderDate(Date hOrderDate) {
+		this.hOrderDate = hOrderDate;
+	}
+
 	public NationalBean getNationalBean() {
 		return nationalBean;
 	}
@@ -275,5 +286,5 @@ public class HotelOrderBean{
 	public void setHotelRoomBean(HotelRoomBean hotelRoomBean) {
 		this.hotelRoomBean = hotelRoomBean;
 	}
-	
+
 }

@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.util.Date;
 
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -41,6 +42,8 @@ public class FlightOrderBean {
 	private Integer fOrderChild;
 	@Column(name="F_order_national")
 	private String fOrderNational;
+	@Column(name="F_order_date")
+	private Date fOrderDate;
 
 	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="customer_id")
@@ -54,7 +57,7 @@ public class FlightOrderBean {
 
 	public FlightOrderBean(String fOrderId, String customerId, String fOrderName, String fOrderPhone,
 			String fOrderEmail, Boolean fOrderSalutation, Integer fOrderTotal, Boolean fOrderSegment,
-			Integer fOrderAdult, Integer fOrderChild, String fOrderNational, CustomerBean customerBean,
+			Integer fOrderAdult, Integer fOrderChild, String fOrderNational, Date fOrderDate, CustomerBean customerBean,
 			NationalBean nationalBean) {
 		super();
 		this.fOrderId = fOrderId;
@@ -68,6 +71,7 @@ public class FlightOrderBean {
 		this.fOrderAdult = fOrderAdult;
 		this.fOrderChild = fOrderChild;
 		this.fOrderNational = fOrderNational;
+		this.fOrderDate = fOrderDate;
 		this.customerBean = customerBean;
 		this.nationalBean = nationalBean;
 	}
@@ -78,7 +82,7 @@ public class FlightOrderBean {
 				+ ", fOrderPhone=" + fOrderPhone + ", fOrderEmail=" + fOrderEmail + ", fOrderSalutation="
 				+ fOrderSalutation + ", fOrderTotal=" + fOrderTotal + ", fOrderSegment=" + fOrderSegment
 				+ ", fOrderAdult=" + fOrderAdult + ", fOrderChild=" + fOrderChild + ", fOrderNational=" + fOrderNational
-				+ "]";
+				+ ", fOrderDate=" + fOrderDate + "]";
 	}
 
 	public String getfOrderId() {
@@ -169,6 +173,14 @@ public class FlightOrderBean {
 		this.fOrderNational = fOrderNational;
 	}
 
+	public Date getfOrderDate() {
+		return fOrderDate;
+	}
+
+	public void setfOrderDate(Date fOrderDate) {
+		this.fOrderDate = fOrderDate;
+	}
+
 	public CustomerBean getCustomerBean() {
 		return customerBean;
 	}
@@ -184,7 +196,5 @@ public class FlightOrderBean {
 	public void setNationalBean(NationalBean nationalBean) {
 		this.nationalBean = nationalBean;
 	}
-	
-	
 	
 }

@@ -34,8 +34,8 @@ public class TrafficOrderBean {
 	private String rOrderTrainNo;
 	@Column(name="R_order_type")
 	private String rOrderType;
-	@Column(name="R_order_date")
-	private Date rOrderDate;
+	@Column(name="R_order_useDate")
+	private Date rOrderUseDate;
 	@Column(name="R_order_startT")
 	private Time rOrderStartT;
 	@Column(name="R_order_endT")
@@ -46,11 +46,13 @@ public class TrafficOrderBean {
 	private String rOrderEndP;
 	@Column(name="R_order_travelT")
 	private Time rOrderTravelT;
+	@Column(name="R_order_date")
+	private Date rOrderDate;
 	public TrafficOrderBean() { }
 	public TrafficOrderBean(String rOrderId, String customerId, String rOrderFirstName, String rOrderLastName,
 			String rOrderNational, Integer rOrderTotal, Integer rOrderAmount, String rOrderEmail, String rOrderTrainNo,
-			String rOrderType, Date rOrderDate, Time rOrderStartT, Time rOrderEndT, String rOrderStratP,
-			String rOrderEndP, Time rOrderTravelT) {
+			String rOrderType, Date rOrderUseDate, Time rOrderStartT, Time rOrderEndT, String rOrderStratP,
+			String rOrderEndP, Time rOrderTravelT, Date rOrderDate) {
 		super();
 		this.rOrderId = rOrderId;
 		this.customerId = customerId;
@@ -62,21 +64,23 @@ public class TrafficOrderBean {
 		this.rOrderEmail = rOrderEmail;
 		this.rOrderTrainNo = rOrderTrainNo;
 		this.rOrderType = rOrderType;
-		this.rOrderDate = rOrderDate;
+		this.rOrderUseDate = rOrderUseDate;
 		this.rOrderStartT = rOrderStartT;
 		this.rOrderEndT = rOrderEndT;
 		this.rOrderStratP = rOrderStratP;
 		this.rOrderEndP = rOrderEndP;
 		this.rOrderTravelT = rOrderTravelT;
+		this.rOrderDate = rOrderDate;
 	}
 	@Override
 	public String toString() {
 		return "TrafficOrderBean [rOrderId=" + rOrderId + ", customerId=" + customerId + ", rOrderFirstName="
 				+ rOrderFirstName + ", rOrderLastName=" + rOrderLastName + ", rOrderNational=" + rOrderNational
 				+ ", rOrderTotal=" + rOrderTotal + ", rOrderAmount=" + rOrderAmount + ", rOrderEmail=" + rOrderEmail
-				+ ", rOrderTrainNo=" + rOrderTrainNo + ", rOrderType=" + rOrderType + ", rOrderDate=" + rOrderDate
+				+ ", rOrderTrainNo=" + rOrderTrainNo + ", rOrderType=" + rOrderType + ", rOrderUseDate=" + rOrderUseDate
 				+ ", rOrderStartT=" + rOrderStartT + ", rOrderEndT=" + rOrderEndT + ", rOrderStratP=" + rOrderStratP
-				+ ", rOrderEndP=" + rOrderEndP + ", rOrderTravelT=" + rOrderTravelT + "]";
+				+ ", rOrderEndP=" + rOrderEndP + ", rOrderTravelT=" + rOrderTravelT + ", rOrderDate=" + rOrderDate
+				+ "]";
 	}
 	public String getrOrderId() {
 		return rOrderId;
@@ -138,11 +142,11 @@ public class TrafficOrderBean {
 	public void setrOrderType(String rOrderType) {
 		this.rOrderType = rOrderType;
 	}
-	public Date getrOrderDate() {
-		return rOrderDate;
+	public Date getrOrderUseDate() {
+		return rOrderUseDate;
 	}
-	public void setrOrderDate(Date rOrderDate) {
-		this.rOrderDate = rOrderDate;
+	public void setrOrderUseDate(Date rOrderUseDate) {
+		this.rOrderUseDate = rOrderUseDate;
 	}
 	public Time getrOrderStartT() {
 		return rOrderStartT;
@@ -173,6 +177,12 @@ public class TrafficOrderBean {
 	}
 	public void setrOrderTravelT(Time rOrderTravelT) {
 		this.rOrderTravelT = rOrderTravelT;
+	}
+	public Date getrOrderDate() {
+		return rOrderDate;
+	}
+	public void setrOrderDate(Date rOrderDate) {
+		this.rOrderDate = rOrderDate;
 	}
 	
 	
