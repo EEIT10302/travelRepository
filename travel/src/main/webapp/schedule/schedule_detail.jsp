@@ -178,7 +178,7 @@
     <div id="mainbox">
         <div id="tourInfo">
             <div class="image">
-                <img src="../images/card2.jpg">
+                <img src="../images/schedule/tour.jpg">
             </div>
             <div>
                 <h4>【函館山夜景】</h4><span class="like"></span>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="dayInfo">
                             <div>
-                                <img src="../images/card1.jpg">
+                                <img src="../images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -222,7 +222,7 @@
                         </div>
                         <div class="dayInfo">
                             <div>
-                                <img src="../images/card1.jpg">
+                                <img src="../images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -244,7 +244,7 @@
                         </div>
                         <div class="dayInfo">
                             <div>
-                                <img src="../images/card1.jpg">
+                                <img src="../images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -259,7 +259,7 @@
                         </div>
                         <div class="dayInfo">
                             <div>
-                                <img src="../images/card1.jpg">
+                                <img src="../images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>

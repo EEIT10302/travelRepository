@@ -460,7 +460,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="like"></span>
-                                <img class="card-img-top" src="../images/card1.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card1.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)瑞芳</h5>
                                     <p class="card-text">瑞芳區古樸的風情近年來吸引了相當多的民眾前往旅遊，除九份、金瓜石所呈現的古鎮風情以外，許多特別的旅遊景點也不容錯過。</p>
@@ -471,7 +471,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                <span class="like"></span>
-                                <img class="card-img-top" src="../images/card2.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card2.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)金瓜石</h5>
                                     <p class="card-text">日治時期日本人來金瓜石開採金礦，逐漸成唯一個地方生活圈，金瓜石便有『東亞第一金都』之稱。</p>
@@ -482,7 +482,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                <span class="like"></span>
-                                <img class="card-img-top" src="../images/card3.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card3.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)淡水</h5>
                                     <p class="card-text">漁人碼頭為一兼具漁業發展與觀光休閒的優質公園，漁人碼頭在經過整地興建後，已成為新北市重要的觀光活動休閒場地。</p>
@@ -493,7 +493,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="like"></span>
-                                <img class="card-img-top" src="../images/card4.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card4.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(臺北)九份</h5>
                                     <p class="card-text">金瓜石，60年代以後，隨著礦脈枯竭，採金的事業雙雙走入歷史，留下的礦場景觀在70年代末期隨著懷舊風潮吹起，反而成為觀光熱門地。</p>
@@ -504,7 +504,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="like"></span>
-                                <img class="card-img-top" src="../images/card5.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card5.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(南投)埔里</h5>
                                     <p class="card-text">埔里由於氣候環境優良，水質清澈，為南投花卉產業重鎮。近來更在埔霧公路起端處探測出溫泉，屬於本縣新興溫泉區。</p>
@@ -515,7 +515,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="like"></span>
-                                <img class="card-img-top" src="../images/card6.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card6.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台東)鐵路藝術村</h5>
                                     <p class="card-text">擁有80年歷史的臺東火車站功成身退後，搖身一變成為歷史建築、藝術、旅遊休閒的多元文化空間－臺東鐵道藝術村，各類型的藝術家、藝術團體群聚、整合、交流。</p>

@@ -115,7 +115,7 @@
                 <div id="memberbox">
                     <div id="personPic">
                         <div id="cutPic">
-                            <img src="../images/user.jpg">
+                            <img src="../images/user/user.jpg">
                         </div>
                         <form>
                           <div class="form-group">

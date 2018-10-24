@@ -5,18 +5,18 @@
 <meta charset="UTF-8">
 <title>美麗殿城市商旅</title>
 <link href="../css/roomInfo.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/search.css" rel="stylesheet" />
-    <link href="../css/login.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/jquery.func_toggle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="../js/jquery.fancybox.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" />
+<link href="../css/search.css" rel="stylesheet" />
+<link href="../css/login.css" rel="stylesheet" />
+<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.func_toggle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="../js/jquery.fancybox.min.js"></script>
 
     <script>
         $(function() {
@@ -167,13 +167,13 @@
                 </ol>
                 <div class="carousel-inner" >
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="../images/index9.jpg" alt="First slide">
+                        <img class="d-block w-100" src="../images/hotel/index9.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/index12.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="../images/hotel/index12.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/index14.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="../images/hotel/index14.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -205,25 +205,25 @@
         <div class="roombox">
             <div><!--fancybox 幻燈片效果，a href="放大圖" img src="放小圖"，邏輯就是雖然顯示小圖，但點擊進去會連結到大圖-->
                 <p>
-                  <a href="../images/hotel/hotel2.jpg" 
+                  <a href="../images/room/hotel2.jpg" 
                      data-fancybox="images-preview" 
                      data-width="1500" data-height="1000"
                      data-thumbs='{"autoStart":true}'>
-                    <img src="../images/hotel.jpg" />
+                    <img src="../images/hotel/hotel.jpg" />
                   </a>
                 </p>  
                 <div style="display: none;"><!--a href="放大圖" data-thumb="放小圖"，原理跟上面一樣，格式一定要div夾a們-->
-                  <a href="../images/hotel/hotel3.jpg" data-fancybox="images-preview" 
+                  <a href="../images/room/hotel3.jpg" data-fancybox="images-preview" 
                      data-width="1500" data-height="1000"
-                     data-thumb="../images/hotel/hotel3.jpg" width="240" height="160"></a>
+                     data-thumb="../images/room/hotel3.jpg" width="240" height="160"></a>
 
-                  <a href="../images/hotel/hotel4.jpg" data-fancybox="images-preview" 
+                  <a href="../images/room/hotel4.jpg" data-fancybox="images-preview" 
                      data-width="1500" data-height="1000"
-                     data-thumb="../images/hotel/hotel4.jpg" width="240" height="160"></a>
+                     data-thumb="../images/room/hotel4.jpg" width="240" height="160"></a>
 
-                  <a href="../images/hotel/hotel5.jpg" data-fancybox="images-preview" 
+                  <a href="../images/room/hotel5.jpg" data-fancybox="images-preview" 
                      data-width="1500" data-height="1000"
-                     data-thumb="../images/hotel/hotel5.jpg" width="240" height="160"></a>
+                     data-thumb="../images/room/hotel5.jpg" width="240" height="160"></a>
                 </div>
             </div>
             <div class="roomInfo">
@@ -257,24 +257,24 @@
             <div>
                 <p>
                   <a href="../images/hotel/hotel2.jpg" 
-                     data-fancybox="images-preview" 
+                     data-fancybox="images-preview2" 
                      data-width="1500" data-height="1000"
                      data-thumbs='{"autoStart":true}'>
-                    <img src="../images/hotel.jpg" />
+                    <img src="../images/hotel/hotel.jpg" />
                   </a>
                 </p>  
                 <div style="display: none;">
-                  <a href="../images/hotel/hotel3.jpg" data-fancybox="images-preview" 
+                  <a href="../images/room/hotel3.jpg" data-fancybox="images-preview2" 
                      data-width="1500" data-height="1000"
-                     data-thumb="../images/hotel/hotel3.jpg" width="240" height="160"></a>
+                     data-thumb="../images/room/hotel3.jpg" width="240" height="160"></a>
 
-                  <a href="../images/hotel/hotel4.jpg" data-fancybox="images-preview" 
+                  <a href="../images/room/hotel4.jpg" data-fancybox="images-preview2" 
                      data-width="1500" data-height="1000"
-                     data-thumb="../images/hotel/hotel4.jpg" width="240" height="160"></a>
+                     data-thumb="../images/room/hotel4.jpg" width="240" height="160"></a>
 
-                  <a href="../images/hotel/hotel5.jpg" data-fancybox="images-preview" 
+                  <a href="../images/room/hotel5.jpg" data-fancybox="images-preview2" 
                      data-width="1500" data-height="1000"
-                     data-thumb="../images/hotel/hotel5.jpg" width="240" height="160"></a>
+                     data-thumb="../images/room/hotel5.jpg" width="240" height="160"></a>
                 </div>
             </div>
             <div class="roomInfo">
@@ -363,7 +363,7 @@
         <h4>評論</h4>
         <div class="commentbox">
             <div class="userPic">
-                <img src="../images/user.jpg">
+                <img src="../images/user/user.jpg">
             </div>
             <div class="userComment">
                <div class="rating">
@@ -374,7 +374,7 @@
         </div>
         <div class="commentbox">
             <div class="userPic">
-                <img src="../images/user.jpg">
+                <img src="../images/user/user.jpg">
             </div>
             <div class="userComment">
                <div class="rating">

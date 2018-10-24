@@ -106,7 +106,7 @@
    <!--             <h5 class="titleh5">我的行程</h5>
                 <div class="tourbox">
                     <div>
-                        <img src="../images/tour.jpg">
+                        <img src="../images/schedule/tour.jpg">
                     </div>
                     <div>
                         <h4><span class="tag child">親子</span>環島遊‧台北+花蓮 (南部出發)</h4>

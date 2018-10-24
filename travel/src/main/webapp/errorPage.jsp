@@ -24,7 +24,7 @@
     <main>
         <div id="title">
             <h1>Oops!</h1>
-            <img src="images/errorpic.png" width="100px">
+            <img src="images/error/errorpic.png" width="100px">
         </div>
         <div id="errormsg">
             <p>This page is still constructing.</p>

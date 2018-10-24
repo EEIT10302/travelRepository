@@ -32,7 +32,7 @@ public class HotelOrderBean{
 	private String hOrderNational;
 	@Column(name="H_order_firstName")
 	private String hOrderFirstName;
-	@Column(name="H_order_firstName")
+	@Column(name="H_order_lastName")
 	private String hOrderLastName;
 	@Column(name="H_order_phone")
 	private String hOrderPhone;

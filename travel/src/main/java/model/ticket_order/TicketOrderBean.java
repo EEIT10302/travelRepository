@@ -23,8 +23,10 @@ public class TicketOrderBean {
 	private String customerId;
 	@Column(name="Sight_id")
 	private String sightId;
-	@Column(name="T_order_name")
-	private String tOrderName;
+	@Column(name="T_order_firstName")
+	private String tOrderFirstName;
+	@Column(name="T_order_lastName")
+	private String tOrderLastName;
 	@Column(name="T_order_total")
 	private Integer tOrderTotal;
 	@Column(name="T_order_amount")
@@ -44,14 +46,15 @@ public class TicketOrderBean {
 	@JoinColumn(name="sight_id")
 	private SightBean sightBean;
 	public TicketOrderBean() { }
-	public TicketOrderBean(String tOrderId, String customerId, String sightId, String tOrderName, Integer tOrderTotal,
-			Integer tOrderAmount, String tOrderNational, String tOrderEmail, Date tOrderFinalDate, Date tOrderDate,
-			CustomerBean customerBean, SightBean sightBean) {
+	public TicketOrderBean(String tOrderId, String customerId, String sightId, String tOrderFirstName,
+			String tOrderLastName, Integer tOrderTotal, Integer tOrderAmount, String tOrderNational, String tOrderEmail,
+			Date tOrderFinalDate, Date tOrderDate, CustomerBean customerBean, SightBean sightBean) {
 		super();
 		this.tOrderId = tOrderId;
 		this.customerId = customerId;
 		this.sightId = sightId;
-		this.tOrderName = tOrderName;
+		this.tOrderFirstName = tOrderFirstName;
+		this.tOrderLastName = tOrderLastName;
 		this.tOrderTotal = tOrderTotal;
 		this.tOrderAmount = tOrderAmount;
 		this.tOrderNational = tOrderNational;
@@ -64,9 +67,10 @@ public class TicketOrderBean {
 	@Override
 	public String toString() {
 		return "TicketOrderBean [tOrderId=" + tOrderId + ", customerId=" + customerId + ", sightId=" + sightId
-				+ ", tOrderName=" + tOrderName + ", tOrderTotal=" + tOrderTotal + ", tOrderAmount=" + tOrderAmount
-				+ ", tOrderNational=" + tOrderNational + ", tOrderEmail=" + tOrderEmail + ", tOrderFinalDate="
-				+ tOrderFinalDate + ", tOrderDate=" + tOrderDate + "]";
+				+ ", tOrderFirstName=" + tOrderFirstName + ", tOrderLastName=" + tOrderLastName + ", tOrderTotal="
+				+ tOrderTotal + ", tOrderAmount=" + tOrderAmount + ", tOrderNational=" + tOrderNational
+				+ ", tOrderEmail=" + tOrderEmail + ", tOrderFinalDate=" + tOrderFinalDate + ", tOrderDate=" + tOrderDate
+				+ "]";
 	}
 	public String gettOrderId() {
 		return tOrderId;
@@ -86,11 +90,17 @@ public class TicketOrderBean {
 	public void setSightId(String sightId) {
 		this.sightId = sightId;
 	}
-	public String gettOrderName() {
-		return tOrderName;
+	public String gettOrderFirstName() {
+		return tOrderFirstName;
 	}
-	public void settOrderName(String tOrderName) {
-		this.tOrderName = tOrderName;
+	public void settOrderFirstName(String tOrderFirstName) {
+		this.tOrderFirstName = tOrderFirstName;
+	}
+	public String gettOrderLastName() {
+		return tOrderLastName;
+	}
+	public void settOrderLastName(String tOrderLastName) {
+		this.tOrderLastName = tOrderLastName;
 	}
 	public Integer gettOrderTotal() {
 		return tOrderTotal;
@@ -140,5 +150,6 @@ public class TicketOrderBean {
 	public void setSightBean(SightBean sightBean) {
 		this.sightBean = sightBean;
 	}
+	
 	
 }

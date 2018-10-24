@@ -457,7 +457,7 @@
             <div id="show">
                 <div class="hotelbox">
                     <div>
-                        <img src="../images/hotel.jpg">
+                        <img src="../images/hotel/hotel.jpg">
                     </div>
                     <div>
                         <h4>西門星辰大飯店(西門店)</h4>
@@ -470,7 +470,7 @@
                 </div>
                 <div class="hotelbox">
                     <div>
-                        <img src="../images/hotel.jpg">
+                        <img src="../images/hotel/hotel.jpg">
                     </div>
                     <div>
                         <h4>西門星辰大飯店(西門店)</h4>

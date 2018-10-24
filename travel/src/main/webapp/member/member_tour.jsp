@@ -107,7 +107,7 @@
                 <h5 class="titleh5">收藏的行程</h5> 
                 <div class="tourbox">
                     <div>
-                        <img src="../images/tour.jpg">
+                        <img src="../images/schedule/tour.jpg">
                     </div>
                     <div>
                         <h4><span class="tag culture">文化</span>環島遊‧台北+花蓮 (南部出發)</h4>
@@ -122,7 +122,7 @@
                 </div>  
                 <div class="tourbox">
                     <div>
-                        <img src="../images/tour.jpg">
+                        <img src="../images/schedule/tour.jpg">
                     </div>
                     <div>
                         <h4><span class="tag couple">情侶</span>環島遊‧台北+花蓮 (南部出發)</h4>

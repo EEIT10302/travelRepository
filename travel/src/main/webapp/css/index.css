@@ -27,7 +27,7 @@ body {
 
 #s1 {
     position: relative;
-    background-image: url(../images/index9.jpg);
+    background-image: url(../images/index/index9.jpg);
     color: white;
 }
 #s1 img{
@@ -184,7 +184,7 @@ nav ul li:nth-child(8) a::before{
     right:20px;
 }
 #s2 {
-    background-image: url(../images/index3.jpg);
+    background-image: url(../images/index/index3.jpg);
     background-attachment: fixed;
     height: 300px;
 }
@@ -201,14 +201,14 @@ nav ul li:nth-child(8) a::before{
     letter-spacing: 0.05em;
 }
 #s3 {
-    background-image: url(../images/index15.jpg);
+    background-image: url(../images/index/index15.jpg);
     color: white;
     position: relative;
 }
 
 #s4 {
     position: relative;
-    background-image: url(../images/index16.jpg);
+    background-image: url(../images/index/index16.jpg);
     background-attachment: fixed;
 }
 #s4 .textbox:nth-child(1){
@@ -221,7 +221,7 @@ nav ul li:nth-child(8) a::before{
     top:70px;
 }
 #s5 {
-    background-image: url(../images/index13.jpg);
+    background-image: url(../images/index/index13.jpg);
     color: white;
     position: relative;
 }

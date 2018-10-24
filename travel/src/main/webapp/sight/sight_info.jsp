@@ -174,13 +174,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="../images/index9.jpg" alt="First slide">
+                        <img class="d-block w-100" src="../images/sight/index9.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/index12.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="../images/sight/index12.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../images/index14.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="../images/sight/index14.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -212,7 +212,7 @@
         <h3>評論</h3>
         <div class="commentbox">
             <div class="userPic">
-                <img src="../images/user.jpg">
+                <img src="../images/user/user.jpg">
             </div>
             <div class="userComment">
                <div class="rating">
@@ -228,7 +228,7 @@
         </div>
         <div class="commentbox">
             <div class="userPic">
-                <img src="../images/user.jpg">
+                <img src="../images/user/user.jpg">
             </div>
             <div class="userComment">
                <div class="rating">
@@ -239,7 +239,7 @@
         </div>
         <div class="commentbox">
             <div class="userPic">
-                <img src="../images/user.jpg">
+                <img src="../images/user/user.jpg">
             </div>
             <div class="userComment">
                <div class="rating">

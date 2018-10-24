@@ -337,7 +337,7 @@
                     <div class="hotel">
                         <div class="hotelbox">
                             <div>
-                                <img src="../images/hotel.jpg">
+                                <img src="../images/hotel/hotel.jpg">
                             </div>
                             <div>
                                 <h4>西門星辰大飯店(西門店)</h4>
@@ -409,7 +409,7 @@
                     <div class="ticket">
                         <div class="ticketbox">
                             <div>
-                                <img src="../images/hotel.jpg">
+                                <img src="../images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h4>台南奇美博物館</h4>

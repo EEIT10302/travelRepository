@@ -64,68 +64,73 @@
         <div class="loginbox log">
             <form>
                     <div class="form-group">
-                        <label for="log_email" class=" col-form-label-sm">帳號</label>
-                        <input type="email" class="form-control form-control-sm" id="log_email" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">註冊時的電子郵件</small>
+                        <label for="exampleInputEmail1">Account</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">email address</small>
                     </div>
                     <div class="form-group">
-                        <label for="log_pass" class=" col-form-label-sm">密碼</label>
-                        <input type="password" class="form-control form-control-sm" id="log_pass" placeholder="Password">
-                        <small id="passerror" class="form-text text-danger">請輸入密碼!</small><!--error提示文字展演-->
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <small id="passerror" class="form-text text-danger">Please enter your password</small><!--error提示文字展演-->
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="remember">
-                        <label class="form-check-label mb-3" for="remember">remember me</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label mb-3" for="exampleCheck1">remember me</label>
                     </div>
                     <div id="thirdLogin">
                         <div class="fbLogin">
-                            <span>臉書登入</span>
+                            <span>login by Facebook</span>
                         </div>
                         <div class="ggLogin">
-                            <span>google登入</span>
+                            <span>login by google</span>
                         </div>
                     </div>
                     <hr/>
-                    <button name="login" class="btn btn-primary btn-block">登入會員</button>
+                    <button name="login" class="btn btn-primary btn-block">Login</button>
                    
             </form>
-            <p class="regisBtn" onclick="register(1)">還不是會員?</p>
+            <p class="regisBtn" onclick="register(1)">create account</p>
         </div>
         <div class="loginbox reg">
             <form>
                     <div class="form-group">
-                        <label for="reg_email" class=" col-form-label-sm">電子郵件(帳號)</label>
-                        <input type="email" class="form-control  form-control-sm" id="reg_email" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="passerror" class="form-text text-danger">請輸入密碼!</small>
+                        <label for="reg_email">Email(account name)</label>
+                        <input type="email" class="form-control" id="reg_email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="passerror" class="form-text text-danger">Please enter your password</small>
                     </div>
                     <div class="form-group">
-                        <label for="reg_password" class=" col-form-label-sm">密碼</label>
-                        <input type="password" class="form-control form-control-sm" id="reg_password" placeholder="Password">
-                        <small id="passerror" class="form-text text-danger">請輸入密碼!</small>
+                        <label for="reg_password">Password</label>
+                        <input type="password" class="form-control" id="reg_password" placeholder="Password">
+                        <small id="passerror" class="form-text text-danger">Please enter your password</small>
                     </div>
                     <div class="form-group">
-                        <label for="reg_name" class=" col-form-label-sm">姓名</label>
-                        <input type="text" class="form-control form-control-sm" id="reg_name" placeholder="Cheng Pei Pei">
-                        <small id="passerror" class="form-text text-danger">請輸入密碼!</small>
-                    </div>    
+                        <label for="reg_name">FirstName</label>
+                        <input type="text" class="form-control" id="reg_name" placeholder="Cheng Pei Pei">
+                        <small id="passerror" class="form-text text-danger">Please enter your firstName</small>
+                    </div>  
                     <div class="form-group">
-                        <label for="reg_birth" class=" col-form-label-sm">生日</label>
-                        <input type="date" class="form-control form-control-sm" id="reg_birth" placeholder="0911-220-330">
-                        <small id="passerror" class="form-text text-danger">請輸入密碼!</small>
+                        <label for="reg_name">LastName</label>
+                        <input type="text" class="form-control" id="reg_name" placeholder="Cheng Pei Pei">
+                        <small id="passerror" class="form-text text-danger">Please enter your lastName</small>
+                    </div>  
+                    <div class="form-group">
+                        <label for="reg_birth">Birthday</label>
+                        <input type="date" class="form-control" id="reg_birth" placeholder="0911-220-330">
+                        <small id="passerror" class="form-text text-danger">Please enter your password</small>
                     </div>
                     <div id="thirdLogin">
                         <div class="fbLogin">
-                            <span>臉書註冊</span>
+                            <span>login by Facebook</span>
                         </div>
                         <div class="ggLogin">
-                            <span>google註冊</span>
+                            <span>login by google</span>
                         </div>
                     </div>
                     <hr/>
-                    <button name="login" class="btn btn-primary btn-block">註冊會員</button>
+                    <button name="login" class="btn btn-primary btn-block">Creat Account</button>
                    
             </form>
-            <p class="regisBtn" onclick="register(2)">已是會員?</p>
+            <p class="regisBtn" onclick="register(2)">Login</p>
         </div>
     </div>
     
@@ -137,7 +142,7 @@
         <div class="logo">
             <p>—— 台灣 ——</p>
         </div>
-        <img src="images/index_logo.png" width="550px" />
+        <img src="images/index/index_logo.png" width="550px" />
         <nav id="navbar">
             <ul> 
                 <li><a href="flight/flight_index.jsp">order flights</a></li>

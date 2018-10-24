@@ -40,7 +40,7 @@ public class TrafficOrderBean {
 	private Time rOrderStartT;
 	@Column(name="R_order_endT")
 	private Time rOrderEndT;
-	@Column(name="R_order_stratP")
+	@Column(name="R_order_startP")
 	private String rOrderStratP;
 	@Column(name="R_order_endP")
 	private String rOrderEndP;

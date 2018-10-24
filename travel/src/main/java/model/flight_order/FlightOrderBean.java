@@ -24,8 +24,10 @@ public class FlightOrderBean {
 	private String fOrderId;
 	@Column(name="customer_id")
 	private String customerId;
-	@Column(name="F_order_name")
-	private String fOrderName;
+	@Column(name="F_order_firstName")
+	private String fOrderFirstName;
+	@Column(name="F_order_lastName")
+	private String fOrderListName;
 	@Column(name="F_order_phone")
 	private String fOrderPhone;
 	@Column(name="F_order_email")
@@ -55,14 +57,15 @@ public class FlightOrderBean {
 	
 	public FlightOrderBean() {}
 
-	public FlightOrderBean(String fOrderId, String customerId, String fOrderName, String fOrderPhone,
-			String fOrderEmail, Boolean fOrderSalutation, Integer fOrderTotal, Boolean fOrderSegment,
-			Integer fOrderAdult, Integer fOrderChild, String fOrderNational, Date fOrderDate, CustomerBean customerBean,
-			NationalBean nationalBean) {
+	public FlightOrderBean(String fOrderId, String customerId, String fOrderFirstName, String fOrderListName,
+			String fOrderPhone, String fOrderEmail, Boolean fOrderSalutation, Integer fOrderTotal,
+			Boolean fOrderSegment, Integer fOrderAdult, Integer fOrderChild, String fOrderNational, Date fOrderDate,
+			CustomerBean customerBean, NationalBean nationalBean) {
 		super();
 		this.fOrderId = fOrderId;
 		this.customerId = customerId;
-		this.fOrderName = fOrderName;
+		this.fOrderFirstName = fOrderFirstName;
+		this.fOrderListName = fOrderListName;
 		this.fOrderPhone = fOrderPhone;
 		this.fOrderEmail = fOrderEmail;
 		this.fOrderSalutation = fOrderSalutation;
@@ -78,11 +81,11 @@ public class FlightOrderBean {
 
 	@Override
 	public String toString() {
-		return "FlightOrderBean [fOrderId=" + fOrderId + ", customerId=" + customerId + ", fOrderName=" + fOrderName
-				+ ", fOrderPhone=" + fOrderPhone + ", fOrderEmail=" + fOrderEmail + ", fOrderSalutation="
-				+ fOrderSalutation + ", fOrderTotal=" + fOrderTotal + ", fOrderSegment=" + fOrderSegment
-				+ ", fOrderAdult=" + fOrderAdult + ", fOrderChild=" + fOrderChild + ", fOrderNational=" + fOrderNational
-				+ ", fOrderDate=" + fOrderDate + "]";
+		return "FlightOrderBean [fOrderId=" + fOrderId + ", customerId=" + customerId + ", fOrderFirstName="
+				+ fOrderFirstName + ", fOrderListName=" + fOrderListName + ", fOrderPhone=" + fOrderPhone
+				+ ", fOrderEmail=" + fOrderEmail + ", fOrderSalutation=" + fOrderSalutation + ", fOrderTotal="
+				+ fOrderTotal + ", fOrderSegment=" + fOrderSegment + ", fOrderAdult=" + fOrderAdult + ", fOrderChild="
+				+ fOrderChild + ", fOrderNational=" + fOrderNational + ", fOrderDate=" + fOrderDate + "]";
 	}
 
 	public String getfOrderId() {
@@ -101,12 +104,20 @@ public class FlightOrderBean {
 		this.customerId = customerId;
 	}
 
-	public String getfOrderName() {
-		return fOrderName;
+	public String getfOrderFirstName() {
+		return fOrderFirstName;
 	}
 
-	public void setfOrderName(String fOrderName) {
-		this.fOrderName = fOrderName;
+	public void setfOrderFirstName(String fOrderFirstName) {
+		this.fOrderFirstName = fOrderFirstName;
+	}
+
+	public String getfOrderListName() {
+		return fOrderListName;
+	}
+
+	public void setfOrderListName(String fOrderListName) {
+		this.fOrderListName = fOrderListName;
 	}
 
 	public String getfOrderPhone() {

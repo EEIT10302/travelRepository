@@ -267,7 +267,7 @@
                             <div class="dayInfo">
                                 <div>
                                    <div>
-                                    <img src="images/card1.jpg">
+                                    <img src="images/sight/card1.jpg">
                                    </div>
                                     <input type="text" placeholder="09:00" size="7">
                                     ~
@@ -306,7 +306,7 @@
                             <div class="dayInfo">
                                 <div>
                                    <div>
-                                    <img src="images/card1.jpg">
+                                    <img src="images/sight/card1.jpg">
                                    </div>
                                     <input type="text" placeholder="09:00" size="7">
                                     ~
@@ -347,7 +347,7 @@
                     <div id="likeSpace">
                         <div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -357,7 +357,7 @@
                         </div>
                         <div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -366,7 +366,7 @@
                             </div>
                         </div><div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -376,7 +376,7 @@
                         </div>
                         <div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -409,7 +409,7 @@
                     <div id="likeSpace">
                         <div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -418,7 +418,7 @@
                         </div>
                         <div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -426,7 +426,7 @@
                             </div>
                         </div><div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>
@@ -435,7 +435,7 @@
                         </div>
                         <div class="sightbox">
                             <div>
-                                <img src="images/card1.jpg">
+                                <img src="images/sight/card1.jpg">
                             </div>
                             <div>
                                 <h5>九份老街</h5>

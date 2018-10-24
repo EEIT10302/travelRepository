@@ -15,9 +15,9 @@ public class HotelBean {
 	private String hotelId;
 	@Column(name="hotel_name")
 	private String hotelName;
-	@Column(name="hotel_name")
+	@Column(name="hotel_phone")
 	private String hotelPhone;
-	@Column(name="hotel_name")
+	@Column(name="hotel_address")
 	private String hotelAddress;
 	@Column(name="hotel_area")
 	private String hotelArea;

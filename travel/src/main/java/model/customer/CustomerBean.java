@@ -29,6 +29,8 @@ public class CustomerBean {
 	private Date customerBirthday;
 	@Column(name="customer_email")
 	private String customerEmail;
+	@Column(name="customer_national")
+	private String customerNational;
 	@Column(name="customer_date")
 	private Date customerDate;
 
@@ -36,7 +38,7 @@ public class CustomerBean {
 
 	public CustomerBean(String customerId, String customerLastName, String customerFirstName, String customerPassword,
 			String customerPhone, Boolean customerGender, Date customerBirthday, String customerEmail,
-			Date customerDate) {
+			String customerNational, Date customerDate) {
 		super();
 		this.customerId = customerId;
 		this.customerLastName = customerLastName;
@@ -46,6 +48,7 @@ public class CustomerBean {
 		this.customerGender = customerGender;
 		this.customerBirthday = customerBirthday;
 		this.customerEmail = customerEmail;
+		this.customerNational = customerNational;
 		this.customerDate = customerDate;
 	}
 
@@ -54,7 +57,8 @@ public class CustomerBean {
 		return "CustomerBean [customerId=" + customerId + ", customerLastName=" + customerLastName
 				+ ", customerFirstName=" + customerFirstName + ", customerPassword=" + customerPassword
 				+ ", customerPhone=" + customerPhone + ", customerGender=" + customerGender + ", customerBirthday="
-				+ customerBirthday + ", customerEmail=" + customerEmail + ", customerDate=" + customerDate + "]";
+				+ customerBirthday + ", customerEmail=" + customerEmail + ", customerNational=" + customerNational
+				+ ", customerDate=" + customerDate + "]";
 	}
 
 	public String getCustomerId() {
@@ -121,6 +125,14 @@ public class CustomerBean {
 		this.customerEmail = customerEmail;
 	}
 
+	public String getCustomerNational() {
+		return customerNational;
+	}
+
+	public void setCustomerNational(String customerNational) {
+		this.customerNational = customerNational;
+	}
+
 	public Date getCustomerDate() {
 		return customerDate;
 	}
@@ -128,5 +140,7 @@ public class CustomerBean {
 	public void setCustomerDate(Date customerDate) {
 		this.customerDate = customerDate;
 	}
+	
+	
 
 }

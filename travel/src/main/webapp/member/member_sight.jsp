@@ -110,7 +110,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="special"></span>
-                                <img class="card-img-top" src="../images/card1.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card1.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)瑞芳</h5>
                                     <p class="card-text">瑞芳區古樸的風情近年來吸引了相當多的民眾前往旅遊，除九份、金瓜石所呈現的古鎮風情以外，許多特別的旅遊景點也不容錯過。</p>
@@ -121,7 +121,7 @@
                         <div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="special"></span>
-                                <img class="card-img-top" src="../images/card1.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card1.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)瑞芳</h5>
                                     <p class="card-text">瑞芳區古樸的風情近年來吸引了相當多的民眾前往旅遊，除九份、金瓜石所呈現的古鎮風情以外，許多特別的旅遊景點也不容錯過。</p>
@@ -131,7 +131,7 @@
                         </div><div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="special"></span>
-                                <img class="card-img-top" src="../images/card1.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card1.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)瑞芳</h5>
                                     <p class="card-text">瑞芳區古樸的風情近年來吸引了相當多的民眾前往旅遊，除九份、金瓜石所呈現的古鎮風情以外，許多特別的旅遊景點也不容錯過。</p>
@@ -141,7 +141,7 @@
                         </div><div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="special"></span>
-                                <img class="card-img-top" src="../images/card1.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card1.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)瑞芳</h5>
                                     <p class="card-text">瑞芳區古樸的風情近年來吸引了相當多的民眾前往旅遊，除九份、金瓜石所呈現的古鎮風情以外，許多特別的旅遊景點也不容錯過。</p>
@@ -151,7 +151,7 @@
                         </div><div class=" col-lg-4 p-2">
                             <div class="card">
                                 <span class="special"></span>
-                                <img class="card-img-top" src="../images/card1.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../images/sight/card1.jpg" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">(台北)瑞芳</h5>
                                     <p class="card-text">瑞芳區古樸的風情近年來吸引了相當多的民眾前往旅遊，除九份、金瓜石所呈現的古鎮風情以外，許多特別的旅遊景點也不容錯過。</p>

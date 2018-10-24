@@ -137,7 +137,7 @@
         <div class="logo">
             <p>—— 台灣 ——</p>
         </div>
-        <img src="images/index_logo.png" width="550px" />
+        <img src="images/index/index_logo.png" width="550px" />
         <nav id="navbar">
             <ul> 
                 <li><a href="flight/flight_index.jsp">搜尋機票</a></li>

@@ -457,7 +457,7 @@
             <div id="show">
                 <div class="tourbox">
                     <div>
-                        <img src="../images/tour.jpg">
+                        <img src="../images/sight/card1.jpg">
                     </div>
                     <div>
                         <h4><span class="tag child">親子</span>親子堡入園券</h4>

@@ -241,7 +241,7 @@
                 <div class="orderInfo">
                     <h5>去程</h5>
                     <div>
-                        <img src="../images/chinaAirline.jpg">
+                        <img src="../images/flight/chinaAirline.jpg">
                     </div>
                     <div>
                         <div>
@@ -262,7 +262,7 @@
                 <div class="orderInfo">
                     <h5>回程</h5>
                     <div>
-                        <img src="../images/chinaAirline.jpg">
+                        <img src="../images/flight/chinaAirline.jpg">
                     </div>
                     <div>
                         <div>

@@ -223,7 +223,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="../images/firstpage_wall1.jpg" alt="First slide">
+                    <img class="d-block w-100" src="../images/ticket/firstpage_wall1.jpg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>臺灣桃園國際機場</h5>
                         <p>為臺灣國際航空樞紐，現今共有66家航空公司經營定期航線、飛往全球33個國家的143個航點，年均旅客流量超過4,000萬人次。 擁有2座客運航廈，聯外之高速公路及捷運系統，其客運吞吐量位居世界各機場第35位，貨運吞吐量則為世界第9高。
@@ -231,14 +231,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../images/firstpage_wall2.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="../images/ticket/firstpage_wall2.jpg" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>高雄小港國際機場</h5>
                         <p>為南臺灣的主要聯外國際機場、以及國際客運出入吞吐地，也是臺灣第二大國際機場，場區緊鄰高雄市區，亦是臺灣第一個設有聯外捷運系統的民用機場。</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../images/firstpage_wall3.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="../images/ticket/firstpage_wall3.jpg" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>臺北松山國際機場</h5>
                         <p>為臺灣第一座機場，與桃園國際機場同為臺北的聯外機場。目前國內與國際航線並重（含兩岸航線），為臺灣的國內航線樞紐。 松山機場成為繼高雄國際機場後，臺灣第二個有聯外捷運系統直接連接的民用機場。
@@ -246,14 +246,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../images/firstpage_wall4.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="../images/ticket/firstpage_wall4.jpg" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>花蓮機場</h5>
                         <p>場區位在臺灣省花蓮縣花蓮市中心北方，該機場為一軍民合用機場，也是東臺灣第一座國際機場。</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../images/firstpage_wall5.jpg" alt="Tainan Airport">
+                    <img class="d-block w-100" src="../images/ticket/firstpage_wall5.jpg" alt="Tainan Airport">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>臺南國際機場</h5>
                         <p>位於臺灣臺南市，是雲嘉南地區最大的機場，不僅是臺南主要的聯外機場，也是雲嘉南地區第一座國際機場。 臺南機場緊臨臺南市南區、高雄市北端，到臺南市中心的火車站周邊僅6公里。
@@ -276,7 +276,7 @@
             <div class="row">
                 <div class=" col-lg-4 p-4">
                     <div class="card">
-                        <img class="card-img-top" src="../images/card1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../images/sight/card1.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">(台北)瑞芳</h5>
                             <p class="card-text">瑞芳區古樸的風情近年來吸引了相當多的民眾前往旅遊，除九份、金瓜石所呈現的古鎮風情以外，許多特別的旅遊景點也不容錯過。</p>
@@ -286,7 +286,7 @@
                 </div>
                 <div class=" col-lg-4 p-4">
                     <div class="card">
-                        <img class="card-img-top" src="../images/card2.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../images/sight/card2.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">(台北)金瓜石</h5>
                             <p class="card-text">日治時期日本人來金瓜石開採金礦，逐漸成唯一個地方生活圈，金瓜石便有『東亞第一金都』之稱。</p>
@@ -296,7 +296,7 @@
                 </div>
                 <div class=" col-lg-4 p-4">
                     <div class="card">
-                        <img class="card-img-top" src="../images/card3.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../images/sight/card3.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">(台北)淡水</h5>
                             <p class="card-text">漁人碼頭為一兼具漁業發展與觀光休閒的優質公園，漁人碼頭在經過整地興建後，已成為新北市重要的觀光活動休閒場地。</p>
@@ -306,7 +306,7 @@
                 </div>
                 <div class=" col-lg-4 p-4">
                     <div class="card">
-                        <img class="card-img-top" src="../images/card4.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../images/sight/card4.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">(臺北)九份</h5>
                             <p class="card-text">金瓜石，60年代以後，隨著礦脈枯竭，採金的事業雙雙走入歷史，留下的礦場景觀在70年代末期隨著懷舊風潮吹起，反而成為觀光熱門地。</p>
@@ -316,7 +316,7 @@
                 </div>
                 <div class=" col-lg-4 p-4">
                     <div class="card">
-                        <img class="card-img-top" src="../images/card5.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../images/sight/card5.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">(南投)埔里</h5>
                             <p class="card-text">埔里由於氣候環境優良，水質清澈，為南投花卉產業重鎮。近來更在埔霧公路起端處探測出溫泉，屬於本縣新興溫泉區。</p>
@@ -326,7 +326,7 @@
                 </div>
                 <div class=" col-lg-4 p-4">
                     <div class="card">
-                        <img class="card-img-top" src="../images/card6.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../images/sight/card6.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">(台東)鐵路藝術村</h5>
                             <p class="card-text">擁有80年歷史的臺東火車站功成身退後，搖身一變成為歷史建築、藝術、旅遊休閒的多元文化空間－臺東鐵道藝術村，各類型的藝術家、藝術團體群聚、整合、交流。</p>

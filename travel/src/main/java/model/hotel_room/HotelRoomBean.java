@@ -150,5 +150,4 @@ public class HotelRoomBean {
 		this.hotelBean = hotelBean;
 	}
 	
-	
 }
