@@ -145,6 +145,5 @@ public class ScheduleBean {
 	public void setScheduleDetailBean(ScheduleDetailBean scheduleDetailBean) {
 		this.scheduleDetailBean = scheduleDetailBean;
 	}
-	
-
 }
+	

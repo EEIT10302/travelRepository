@@ -12,9 +12,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
+
 import com.mchange.v2.c3p0.DriverManagerDataSource;
 
 import model.flight_order.FlightOrderBean;
+
 
 @Configuration
 @ComponentScan(basePackages = { "model" })
@@ -43,10 +45,12 @@ public class SpringHibernateConfiguration {
 		props.put("hibernate.current_session_context_class", "thread");
 		props.put("hibernate.show_sql", "true");
 
+
 		builder.addProperties(props);
 //		builder.addPackage("model");
 //		builder.scanPackages("model");
 		builder.addAnnotatedClasses(FlightOrderBean.class);
+
 		return builder.buildSessionFactory();
 	}
 
