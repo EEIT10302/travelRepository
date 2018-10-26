@@ -12,11 +12,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
-import model.test.TestBean;
-
+import model_test.test.TestBean;
 
 @Configuration
-@ComponentScan(basePackages={"model"})
+@ComponentScan(basePackages = { "model" })
 public class SpringHibernateConfiguration {
 	@Bean
 	public DataSource dataSource() {
@@ -40,9 +39,9 @@ public class SpringHibernateConfiguration {
 		props.put("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
 		props.put("hibernate.current_session_context_class", "thread");
 		props.put("hibernate.show_sql", "true");
-		
+
 		builder.addProperties(props);
-		 builder.addAnnotatedClasses(TestBean.class);
+		 builder.addAnnotatedClass(TestBean.class);
 		return builder.buildSessionFactory();
 	}
 
