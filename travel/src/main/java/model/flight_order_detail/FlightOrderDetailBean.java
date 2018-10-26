@@ -40,7 +40,7 @@ public class FlightOrderDetailBean implements Serializable {
 	@Column(name="F_class")
 	private String fClass;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="F_order_id")
+	@JoinColumn(name="F_order_id",insertable=false,updatable=false)
 	private FlightOrderBean flightOrderBean; 
 	
 	public FlightOrderDetailBean() {}

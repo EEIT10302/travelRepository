@@ -31,7 +31,7 @@ public class HotelRoomBean {
 	@Column(name="room_amount_total")
 	private Integer roomAmountTotal;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="hotel_id")
+	@JoinColumn(name="hotel_id",insertable=false,updatable=false)
 	private HotelBean hotelBean;
 	
 	

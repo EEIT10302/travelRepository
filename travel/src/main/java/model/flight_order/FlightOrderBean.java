@@ -48,11 +48,11 @@ public class FlightOrderBean {
 	private Date fOrderDate;
 
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="customer_id")
+	@JoinColumn(name="customer_id",insertable=false,updatable=false)
 	private CustomerBean customerBean;
 	
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="F_order_national")
+	@JoinColumn(name="F_order_national",insertable=false,updatable=false)
 	private NationalBean nationalBean;
 	
 	public FlightOrderBean() {}

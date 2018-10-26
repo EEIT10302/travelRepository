@@ -31,14 +31,13 @@ public class ScheduleDetailBean implements Serializable {
 	@Column(name="schedule_detail_endTime")
 	private Time scheduleDetailEndTime;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="schedule_id")
+	@JoinColumn(name="schedule_id",insertable=false,updatable=false)
 	private ScheduleBean scheduleBean;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="sight_id")
+	@JoinColumn(name="sight_id",insertable=false,updatable=false)
 	private SightBean sightBean;
 	
 	public ScheduleDetailBean() { }
-
 	public ScheduleDetailBean(String scheduleId, String sightId, Integer scheduleDetailDayX,
 			Time scheduleDetailStartTime, Time scheduleDetailEndTime, ScheduleBean scheduleBean, SightBean sightBean) {
 		super();

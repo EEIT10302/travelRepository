@@ -26,7 +26,7 @@ public class HotelRoomListBean implements Serializable {
 	@Column(name="room_price")
 	private Integer roomPrice;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="room_id")
+	@JoinColumn(name="room_id",insertable=false,updatable=false)
 	private HotelRoomBean hotelRoomBean;
 	
 	

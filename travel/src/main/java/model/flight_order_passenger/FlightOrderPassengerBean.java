@@ -37,10 +37,10 @@ public class FlightOrderPassengerBean {
 	@Column(name="F_child_price")
 	private Integer fChildPrice;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="F_order_id")
+	@JoinColumn(name="F_order_id",insertable=false,updatable=false)
 	private FlightOrderBean flightOrderBean;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="F_passenger_national")
+	@JoinColumn(name="F_passenger_national",insertable=false,updatable=false)
 	private NationalBean nationalBean;
 	
 	public FlightOrderPassengerBean() { }

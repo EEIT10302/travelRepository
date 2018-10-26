@@ -49,6 +49,4 @@ public class ScheduleFavoriteBean implements Serializable {
 		this.customerId = customerId;
 	}
 
-
-	
 }

@@ -12,8 +12,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
-import model.test.TestBean;
-
 
 @Configuration
 @ComponentScan(basePackages={"model"})
@@ -42,7 +40,7 @@ public class SpringHibernateConfiguration {
 		props.put("hibernate.show_sql", "true");
 		
 		builder.addProperties(props);
-		 builder.addAnnotatedClasses(TestBean.class);
+		builder.scanPackages("model");
 		return builder.buildSessionFactory();
 	}
 
