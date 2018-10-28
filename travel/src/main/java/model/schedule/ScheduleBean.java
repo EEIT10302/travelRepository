@@ -1,6 +1,7 @@
 package model.schedule;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -34,17 +35,17 @@ public class ScheduleBean {
 	@Column(name="schedule_share")
 	private Boolean scheduleShare;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="schedule_type")
+	@JoinColumn(name="schedule_type",insertable=false,updatable=false)
 	private SightTypeBean sightTypeBean;
-	@OneToMany(cascade=CascadeType.MERGE)
-	@JoinColumn(name="schedule_type")
-	private ScheduleDetailBean scheduleDetailBean;
+	@OneToMany(cascade=CascadeType.MERGE)  
+	@JoinColumn(name="schedule_id",insertable=false,updatable=false)
+	private List<ScheduleDetailBean> scheduleDetailBean;
 
 	public ScheduleBean() { }
 
 	public ScheduleBean(String scheduleId, String customerId, String scheduleType, Integer scheduleDays,
 			Integer scheduleTotalPrice, String scheduleDescription, Date scheduleDate, Boolean scheduleShare,
-			SightTypeBean sightTypeBean, ScheduleDetailBean scheduleDetailBean) {
+			SightTypeBean sightTypeBean, List<ScheduleDetailBean> scheduleDetailBean) {
 		super();
 		this.scheduleId = scheduleId;
 		this.customerId = customerId;
@@ -138,12 +139,13 @@ public class ScheduleBean {
 		this.sightTypeBean = sightTypeBean;
 	}
 
-	public ScheduleDetailBean getScheduleDetailBean() {
+	public List<ScheduleDetailBean> getScheduleDetailBean() {
 		return scheduleDetailBean;
 	}
 
-	public void setScheduleDetailBean(ScheduleDetailBean scheduleDetailBean) {
+	public void setScheduleDetailBean(List<ScheduleDetailBean> scheduleDetailBean) {
 		this.scheduleDetailBean = scheduleDetailBean;
 	}
+
+
 }
-	

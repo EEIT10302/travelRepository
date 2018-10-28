@@ -27,7 +27,7 @@ public class SightScoreBean implements Serializable {
 	@Column(name="sight_message")
 	private String sightMessage;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="sight_id")
+	@JoinColumn(name="sight_id",insertable=false,updatable=false)
 	private SightBean sightBean;
 	public SightScoreBean() { }
 	public SightScoreBean(String sightId, String customerId, Integer sightScore, String sightMessage,

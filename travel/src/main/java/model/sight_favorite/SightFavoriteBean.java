@@ -23,7 +23,7 @@ public class SightFavoriteBean implements Serializable {
 	@Column(name="customer_id")
 	private String customerId;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="Customer_id")
+	@JoinColumn(name="sight_id",insertable=false,updatable=false)
 	private SightBean sightBean;
 	
 	public SightFavoriteBean() { }

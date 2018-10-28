@@ -49,7 +49,7 @@ public class SightBean {
 	@Column(name="sight_score_times")
 	private Integer sightScoreTimes;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="sight_type_id")
+	@JoinColumn(name="sight_type_id",insertable=false,updatable=false)
 	private SightTypeBean sightTypeBean;
 	
 	public SightBean() { }

@@ -40,10 +40,10 @@ public class TicketOrderBean {
 	@Column(name="T_order_date")
 	private Date tOrderDate;
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="customer_id")
+	@JoinColumn(name="customer_id",insertable=false,updatable=false)
 	private CustomerBean customerBean;
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="sight_id")
+	@JoinColumn(name="sight_id",insertable=false,updatable=false)
 	private SightBean sightBean;
 	public TicketOrderBean() { }
 	public TicketOrderBean(String tOrderId, String customerId, String sightId, String tOrderFirstName,

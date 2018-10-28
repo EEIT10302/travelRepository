@@ -62,10 +62,10 @@ public class HotelOrderBean{
 	private Date hOrderDate;
 	
 	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="H_order_national")
+	@JoinColumn(name="H_stay_national",insertable=false,updatable=false)
 	private NationalBean nationalBean; 
 	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="room_id")
+	@JoinColumn(name="room_id",insertable=false,updatable=false)
 	private HotelRoomBean hotelRoomBean;
 	
 	public HotelOrderBean() { }
