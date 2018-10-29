@@ -13,13 +13,9 @@ import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
 
-import com.mchange.v2.c3p0.DriverManagerDataSource;
-
-import model.flight_order.FlightOrderBean;
-
 
 @Configuration
-@ComponentScan(basePackages = { "model" })
+@ComponentScan(basePackages={"model"})
 public class SpringHibernateConfiguration {
 	@Bean
 	public DataSource dataSource() {
@@ -38,32 +34,16 @@ public class SpringHibernateConfiguration {
 
 	@Bean
 	public SessionFactory sessionFactory() {
-		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSourceManager());// 測試用dataSourceManager()
-																									// 實際網路用dataSource()
+		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource());
 		Properties props = new Properties();
 		props.put("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
 		props.put("hibernate.current_session_context_class", "thread");
 		props.put("hibernate.show_sql", "true");
-
-
+		props.put("hibernate.format_sql", "true");
+		
 		builder.addProperties(props);
-//		builder.addPackage("model");
-//		builder.scanPackages("model");
-		builder.addAnnotatedClasses(FlightOrderBean.class);
-
+		builder.scanPackages("model");
 		return builder.buildSessionFactory();
-	}
-
-	@Bean
-	public DataSource dataSourceManager() {
-		DriverManagerDataSource dmds = new DriverManagerDataSource();
-		dmds.setDriverClass("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		dmds.setJdbcUrl("jdbc:sqlserver://localhost:1433;database=travel");
-		dmds.setUser("sa");
-		dmds.setPassword("passw0rd");
-
-		return dmds;
-
 	}
 
 }
