@@ -13,6 +13,7 @@ import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
 
+
 @Configuration
 @ComponentScan(basePackages={"model"})
 public class SpringHibernateConfiguration {
@@ -38,6 +39,7 @@ public class SpringHibernateConfiguration {
 		props.put("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
 		props.put("hibernate.current_session_context_class", "thread");
 		props.put("hibernate.show_sql", "true");
+		props.put("hibernate.format_sql", "true");
 		
 		builder.addProperties(props);
 		builder.scanPackages("model");
