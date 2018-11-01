@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import model.customer.CustomerBean;
 import model.schedule.ScheduleBean;
 @Entity
-@Table(name="Schedule _Favorite")
+@Table(name="Schedule_Favorite")
 public class ScheduleFavoriteBean implements Serializable {
 	@Id
 	@Column(name="schedule_id")
@@ -49,4 +49,6 @@ public class ScheduleFavoriteBean implements Serializable {
 		this.customerId = customerId;
 	}
 
+
+	
 }

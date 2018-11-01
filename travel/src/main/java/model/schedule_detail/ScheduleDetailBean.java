@@ -26,10 +26,10 @@ public class ScheduleDetailBean implements Serializable {
 	@Column(name="schedule_detail_dayX")
 	private Integer scheduleDetailDayX;
 	@Id
-	@Column(name="schedule_detail_startTime")
-	private Time scheduleDetailStartTime;
-	@Column(name="schedule_detail_endTime")
-	private Time scheduleDetailEndTime;
+	@Column(name="schedule_detail_startTime",columnDefinition="time(0)")
+	private String scheduleDetailStartTime;
+	@Column(name="schedule_detail_endTime",columnDefinition="time(0)")
+	private String scheduleDetailEndTime;
 	@ManyToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="schedule_id",insertable=false,updatable=false)
 	private ScheduleBean scheduleBean;
@@ -39,7 +39,7 @@ public class ScheduleDetailBean implements Serializable {
 	
 	public ScheduleDetailBean() { }
 	public ScheduleDetailBean(String scheduleId, String sightId, Integer scheduleDetailDayX,
-			Time scheduleDetailStartTime, Time scheduleDetailEndTime, ScheduleBean scheduleBean, SightBean sightBean) {
+			String scheduleDetailStartTime, String scheduleDetailEndTime, ScheduleBean scheduleBean, SightBean sightBean) {
 		super();
 		this.scheduleId = scheduleId;
 		this.sightId = sightId;
@@ -81,19 +81,19 @@ public class ScheduleDetailBean implements Serializable {
 		this.scheduleDetailDayX = scheduleDetailDayX;
 	}
 
-	public Time getScheduleDetailStartTime() {
+	public String getScheduleDetailStartTime() {
 		return scheduleDetailStartTime;
 	}
 
-	public void setScheduleDetailStartTime(Time scheduleDetailStartTime) {
+	public void setScheduleDetailStartTime(String scheduleDetailStartTime) {
 		this.scheduleDetailStartTime = scheduleDetailStartTime;
 	}
 
-	public Time getScheduleDetailEndTime() {
+	public String getScheduleDetailEndTime() {
 		return scheduleDetailEndTime;
 	}
 
-	public void setScheduleDetailEndTime(Time scheduleDetailEndTime) {
+	public void setScheduleDetailEndTime(String scheduleDetailEndTime) {
 		this.scheduleDetailEndTime = scheduleDetailEndTime;
 	}
 

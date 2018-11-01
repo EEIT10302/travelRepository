@@ -122,7 +122,8 @@
                         </div>
                     </div>
                     <hr/>
-                    <button name="login" type="submit" class="btn btn-primary btn-block">註冊會員</button>                 
+                    <button name="login" class="btn btn-primary btn-block">註冊會員</button>
+                   
             </form>
             <p class="regisBtn" onclick="register(2)">已是會員?</p>
         </div>
