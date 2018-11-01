@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="National")
+@Table(name="Nationality")
 public class NationalBean {
 	@Id
 	@Column(name="national_id")
