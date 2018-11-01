@@ -14,7 +14,7 @@ public interface SightDao {
 	public List<SightBean> selectType(String sightTypeId);
 	
 	public List<SightBean> selectAll(String type);
-	
+
 	public List<SightBean> selectIndex();
 	
 	public List<SightBean> selectByArea(String sightArea);

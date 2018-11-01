@@ -69,5 +69,4 @@ public class SightDaoImpl implements SightDao{
 			return this.getSession().createQuery(hqlCode, SightBean.class).setParameter("sightArea", sightArea).setMaxResults(12).getResultList();
 		}
 	}
-	
 }

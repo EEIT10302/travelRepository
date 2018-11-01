@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import model.sight.SightBean;
 
 @Repository
-public class SightTypeDaoImpl {
+public class SightTypeDaoImpl implements SightTypeDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
@@ -21,9 +21,10 @@ public class SightTypeDaoImpl {
 	public boolean insert(SightTypeBean bean) {
 //		if (bean != null) {
 //			SightTypeBean test = this.getSession().get(SightTypeBean.class, bean.getSightTypeId());
-//			if(test==null)
+//			if(test==null) {
 //				this.getSession().save(bean);
-//			return true;
+//				return true;
+//			}
 //		}
 		return false;
 	}
@@ -47,6 +48,5 @@ public class SightTypeDaoImpl {
 	public List<SightTypeBean> selectAll(){
 		String hqlCode="from SightTypeBean";
 		return this.getSession().createQuery(hqlCode, SightTypeBean.class).getResultList();
-	}	
-	
+	}
 }

@@ -21,4 +21,27 @@ public class SightService {
 	public List<SightBean> selectByType(String type){
 		return sightDao.selectAll(type);
 	}
+
+	public SightBean select(SightBean bean){
+		System.out.println(bean.getSightId());
+		if(!"".equals(bean.getSightId())) 
+			return sightDao.select(bean.getSightId());
+		else
+			return null;
+	}
+	
+	public List<SightBean> selectTypeId(SightBean bean) {
+		if(!"".equals(bean.getSightTypeId()))
+			return sightDao.selectType(bean.getSightTypeId());
+		else
+			return null;
+	}
+	
+	public List<SightBean> selectType(SightBean bean){
+		if(!"".equals(bean.getSightType()))
+			return sightDao.selectAll(bean.getSightType());
+		else
+			return null;
+	}
+
 }
